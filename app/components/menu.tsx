@@ -18,7 +18,7 @@ export default function Menu() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between px-10 py-8">
+    <div className="w-full flex flex-row justify-between px-10 py-6 bg-red-500">
       <div>laicarson.com</div>
       <ul className="flex flex-row gap-10">
         {menuItems.map((item) => {

@@ -1,8 +1,9 @@
-interface HistoryItem {
+import HistoryCard from "./components/historyCard";
+export interface HistoryItem {
   startDate: Date;
   endDate: Date;
   company: string;
-  description: string;
+  description?: string;
 }
 
 const history: HistoryItem[] = [
@@ -10,7 +11,6 @@ const history: HistoryItem[] = [
     startDate: new Date(2020, 9),
     endDate: new Date(2025, 10),
     company: "Monash University",
-    description: "University",
   },
   {
     startDate: new Date(2024, 10),
@@ -38,26 +38,11 @@ export default function Home() {
       <div className="flex flex-col">
         {history.map((item) => {
           return (
-            <div key={item.company} className="flex flex-row mb-8">
-              <div className="flex flex-col">
-                <span>{item.company}</span>
-                <div className="flex flex-row">
-                  <span>
-                    {item.startDate.toLocaleDateString("en-US", {
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </span>
-                  <span className="px-1">-</span>
-                  <span>
-                    {item.endDate.toLocaleDateString("en-US", {
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </span>
-                </div>
-                <span>{item.description}</span>
-              </div>
+            <div
+              key={item.company}
+              className="flex flex-row w-full mb-8 px-4 py-2 border-2"
+            >
+              <HistoryCard {...item}></HistoryCard>
             </div>
           );
         })}
