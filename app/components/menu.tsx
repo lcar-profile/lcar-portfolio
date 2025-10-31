@@ -18,8 +18,8 @@ export default function Menu() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between px-10 py-4">
-      <div>Lai Carson</div>
+    <div className="w-full flex flex-row justify-between px-10 py-8">
+      <div>laicarson.com</div>
       <ul className="flex flex-row gap-10">
         {menuItems.map((item) => {
           const isCurrentPath = path === item.pathname;
