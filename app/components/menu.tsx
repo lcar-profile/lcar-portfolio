@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./toggle";
 
 interface MenuItem {
   label: string;
@@ -34,6 +35,7 @@ export default function Menu() {
             </li>
           );
         })}
+        <ModeToggle></ModeToggle>
       </ul>
     </div>
   );
