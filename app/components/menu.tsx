@@ -21,7 +21,7 @@ export default function Menu() {
   return (
     <div className="w-full flex flex-row justify-between px-10 py-6 bg-red-500">
       <div>laicarson.com</div>
-      <ul className="flex flex-row gap-10">
+      <ul className="flex flex-row gap-10 items-center">
         {menuItems.map((item) => {
           const isCurrentPath = path === item.pathname;
           return (

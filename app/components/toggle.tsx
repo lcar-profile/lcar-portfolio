@@ -23,7 +23,8 @@ export function ModeToggle() {
 
   return (
     <Button
-      className="bg-background text-foreground"
+      className="bg-background/20 text-foreground"
+      size={"icon-sm"}
       onClick={() => {
         setTheme(isDark ? "light" : "dark");
       }}
