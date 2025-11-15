@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,7 @@ export function ModeToggle() {
 
   return (
     <Button
+      className="bg-background text-foreground"
       onClick={() => {
         setTheme(isDark ? "light" : "dark");
       }}
