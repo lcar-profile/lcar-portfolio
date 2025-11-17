@@ -28,7 +28,7 @@ const history: HistoryItem[] = [
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="w-full">
       <div className="flex flex-col">
         <span>Lai Carson</span>
         <span>Bachelors in Software Engineering (Honours)</span>

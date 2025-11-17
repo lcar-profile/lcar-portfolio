@@ -1,49 +1,36 @@
 import Link from "next/link";
-import { Framework, Language } from "../types/tags";
-
-interface Project {
-  title: string;
-  tags: (Language | Framework)[];
-  description?: string;
-  path?: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "Reversi Game",
-    tags: [Language.JS, Framework.REACT],
-  },
-  {
-    title: "NewsPortal",
-    tags: [Language.JS],
-  },
-  {
-    title: "eWallet Prototype",
-    tags: [],
-  },
-];
+import Image from "next/image";
+import Tag from "../components/tag";
+import { allProjects } from "./data";
 
 export default function Projects() {
+  const projects = allProjects;
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 w-full max-w-3xl">
       {projects.map((project) => {
         return (
           <div
             key={project.title}
-            className="flex flex-col p-4 border-1 rounded-sm"
+            className="flex flex-col border-1 rounded-sm overflow-hidden"
           >
-            <span>{project.title}</span>
-            <span className="flex flex-row gap-2">
-              {project.tags.map((tag) => {
-                return (
-                  <div key={tag} className="px-2 py-1 border-1 rounded-sm">
-                    {tag}
-                  </div>
-                );
-              })}
-            </span>
-            <span>{project.description ?? "No description provided."}</span>
-            <Link href={project.path ?? ""}>See More</Link>
+            <Image
+              src="/images/background.png"
+              width={1920}
+              height={1920}
+              alt="Default background"
+            />
+            <div className="flex flex-col p-3 gap-2 ">
+              <span className="font-bold text-lg">{project.title}</span>
+              <span className="flex flex-row gap-2">
+                {project.tags.map((tag) => (
+                  <Tag key={tag} label={tag}></Tag>
+                ))}
+              </span>
+              <span>{project.subtitle}</span>
+              <Link className="self-center" href={project.path ?? ""}>
+                See More
+              </Link>
+            </div>
           </div>
         );
       })}
