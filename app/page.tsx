@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HistoryCard from "./components/historyCard";
 export interface HistoryItem {
   startDate: Date;
@@ -33,6 +34,13 @@ export default function Home() {
         <span>Lai Carson</span>
         <span>Bachelors in Software Engineering (Honours)</span>
         <span>Description</span>
+        <Link
+          href={"/transcript.pdf"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Academic Transcript
+        </Link>
       </div>
       <div className="m-10"></div>
       <div className="flex flex-col">
@@ -46,7 +54,9 @@ export default function Home() {
             </div>
           );
         })}
-        <span>View Complete Resume</span>
+        <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
+          View Complete Resume
+        </Link>
       </div>
     </div>
   );
