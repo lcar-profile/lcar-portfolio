@@ -23,7 +23,10 @@ export default function Menu() {
       <div>laicarson.com</div>
       <ul className="flex flex-row gap-10 items-center">
         {menuItems.map((item) => {
-          const isCurrentPath = path === item.pathname;
+          const isCurrentPath =
+            item.pathname === "/"
+              ? path === "/"
+              : path.startsWith(item.pathname);
           return (
             <li key={item.pathname}>
               <Link
