@@ -19,9 +19,11 @@ export default function Menu() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between px-10 py-6 bg-red-500">
-      <div>laicarson.com</div>
-      <ul className="flex flex-row gap-10 items-center">
+    <div className="w-full flex flex-row justify-between items-center px-10 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg">
+      <Link href="/" className="font-bold text-lg">
+        Lai Carson
+      </Link>
+      <ul className="flex flex-row gap-7 items-center">
         {menuItems.map((item) => {
           const isCurrentPath =
             item.pathname === "/"
@@ -31,7 +33,11 @@ export default function Menu() {
             <li key={item.pathname}>
               <Link
                 href={item.pathname}
-                className={isCurrentPath ? "underline" : ""}
+                className={`${
+                  isCurrentPath
+                    ? "font-bold underline underline-offset-4"
+                    : "hover:bg-primary/30"
+                } px-3 py-2 rounded-sm`}
               >
                 {item.label}
               </Link>

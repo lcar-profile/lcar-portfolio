@@ -39,7 +39,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Menu></Menu>
-          <div className="flex px-10 py-6 justify-center">{children}</div>
+          <div className="flex px-10 py-6 mt-16 justify-center">{children}</div>
           <Toaster></Toaster>
         </ThemeProvider>
       </body>
