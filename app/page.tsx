@@ -2,7 +2,7 @@ import Link from "next/link";
 import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
 
-const history: HistoryItem[] = [
+const workExperience: HistoryItem[] = [
   {
     startDate: new Date(2024, 10),
     endDate: new Date(2025, 1),
@@ -26,6 +26,54 @@ const history: HistoryItem[] = [
     ],
     image: "/images/time_dotcom_berhad_logo.jpg",
     role: "Operations Support Systems Intern",
+  },
+  {
+    startDate: new Date(2021, 3),
+    endDate: new Date(2022, 1),
+    company: "Raja Eleena Siew Ang & Associates",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
+    image: "/images/bar_logo.svg",
+    role: "Litigation Clerk",
+  },
+];
+
+const education: HistoryItem[] = [
+  {
+    startDate: new Date(2020, 9),
+    endDate: new Date(2025, 10),
+    company: "Monash University",
+    role: "Bachelor of Software Engineering",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
+  },
+  {
+    startDate: new Date(2019, 0),
+    endDate: new Date(2020, 5),
+    company: "Taylor's College",
+    role: "Cambridge A Levels",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
+  },
+  {
+    startDate: new Date(2014, 0),
+    endDate: new Date(2018, 11),
+    company: "SMK Bandar Utama Damansara (3)",
+    role: "Malaysian Education Certificate (SPM)",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
   },
 ];
 
@@ -53,7 +101,7 @@ export default function Home() {
       <hr className="border-t-1 my-6 w-32" />
       <div className="flex flex-col items-center w-full max-w-3xl">
         <h2 className="pb-6 text-xl font-semibold">Work Experience</h2>
-        {history.map((item) => {
+        {workExperience.map((item) => {
           return (
             <div
               key={item.company}
@@ -67,6 +115,16 @@ export default function Home() {
       <hr className="border-t-1 my-6 w-32" />
       <div className="flex flex-col items-center w-full max-w-3xl">
         <h2 className="pb-6 text-xl font-semibold">Education</h2>
+        {education.map((item) => {
+          return (
+            <div
+              key={item.company}
+              className="flex flex-row w-full mb-8 px-4 py-2 border-2"
+            >
+              <HistoryCard {...item}></HistoryCard>
+            </div>
+          );
+        })}
         <Link
           href={"/transcript.pdf"}
           target="_blank"

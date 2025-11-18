@@ -15,7 +15,7 @@ export interface HistoryItem {
   endDate: Date;
   company: string;
   role: string;
-  image: string;
+  image?: string;
   description: string[];
 }
 
@@ -33,7 +33,15 @@ export default function HistoryCard({
     <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
       <div className="flex flex-row w-full justify-between items-center">
         <div className="flex flex-row gap-2">
-          <Image src={image} width={80} height={80} alt={"logo"}></Image>
+          {image && (
+            <Image
+              src={image}
+              width={80}
+              height={80}
+              alt={"logo"}
+              className="h-[80px] aspect-square"
+            ></Image>
+          )}
           <div className="flex flex-col">
             <span>{company}</span>
             <div className="flex flex-row">
