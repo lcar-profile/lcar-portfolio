@@ -19,6 +19,7 @@ import { toast } from "sonner";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import HorizontalRule from "../components/horizontalRule";
 
 interface ContactItem {
   icon: IconType;
@@ -108,7 +109,7 @@ export default function Contact() {
     <div className="flex flex-col items-center w-full">
       <h2>Contact me</h2>
       <h3>Subtitle text here</h3>
-      <hr className="border-t-1 my-6 w-16" />
+      <HorizontalRule />
       <div className="flex flex-col gap-4 w-full max-w-sm">
         {contactItems.map((c) => {
           return <ContactCard key={c.title} contacts={c}></ContactCard>;

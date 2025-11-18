@@ -2,6 +2,7 @@ import Tag from "@/app/components/tag";
 import { Framework, Language } from "@/app/types/tags";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import HorizontalRule from "./horizontalRule";
 
 export interface ProjectProps {
   title: string;
@@ -64,7 +65,7 @@ export default function ProjectBase({
             <div>{lessons}</div>
           </div>
         </div>
-        <hr className="border-t-1 my-6 w-full" />
+        <HorizontalRule />
       </div>
     </div>
   );

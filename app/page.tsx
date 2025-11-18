@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
+import HorizontalRule from "./components/horizontalRule";
 
 const workExperience: HistoryItem[] = [
   {
@@ -81,7 +82,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full items-center">
       <div className="flex flex-col items-center w-full max-w-3xl">
-        <h1 className="mb-1 text-4xl font-bold">Lai Carson</h1>
+        <h1 className="mb-1 mt-6 text-4xl font-bold">Lai Carson</h1>
         <p>Software Engineer</p>
         <p className="my-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -93,12 +94,9 @@ export default function Home() {
           <Button size="lg">Contact Me</Button>
         </Link>
       </div>
-      <hr className="border-t-1 my-6 w-32" />
+      <HorizontalRule />
       <div className="flex flex-col items-center w-full max-w-3xl">
         <h2 className="pb-6 text-xl font-semibold">Work Experience</h2>
-        <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
-          <Button size="lg">View Resume</Button>
-        </Link>
         {workExperience.map((item) => {
           return (
             <div
@@ -109,8 +107,11 @@ export default function Home() {
             </div>
           );
         })}
+        <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
+          <Button size="lg">View Resume</Button>
+        </Link>
       </div>
-      <hr className="border-t-1 my-6 w-32" />
+      <HorizontalRule />
       <div className="flex flex-col items-center w-full max-w-3xl">
         <h2 className="pb-6 text-xl font-semibold">Education</h2>
         {education.map((item) => {

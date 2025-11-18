@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import React from "react";
 import Image from "next/image";
+import HorizontalRule from "./horizontalRule";
 
 export interface HistoryItem {
   startDate: Date;
@@ -70,7 +71,7 @@ export default function HistoryCard({
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent>
-        <hr className="border-t-1 my-6 w-full" />
+        <HorizontalRule />
         <ul>
           {description.map((d) => {
             return <li key={d}>&#x2022; {d}</li>;
