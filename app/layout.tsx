@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lekton, Space_Mono, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import Menu from "./components/menu";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lekton = Lekton({
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const manrope = Manrope({
   subsets: ["latin"],
 });
 
@@ -27,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
-      >
+      <body className={`${manrope.className} antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
