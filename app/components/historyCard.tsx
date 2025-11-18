@@ -8,8 +8,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import React from "react";
-import { HistoryItem } from "../page";
 import Image from "next/image";
+
+export interface HistoryItem {
+  startDate: Date;
+  endDate: Date;
+  company: string;
+  role: string;
+  image: string;
+  description: string[];
+}
 
 export default function HistoryCard({
   startDate,
@@ -54,7 +62,12 @@ export default function HistoryCard({
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent>
-        {description ?? "No description provided."}
+        <hr className="border-t-1 my-6 w-full" />
+        <ul>
+          {description.map((d) => {
+            return <li key={d}>&#x2022; {d}</li>;
+          })}
+        </ul>
       </CollapsibleContent>
     </Collapsible>
   );

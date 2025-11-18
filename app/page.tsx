@@ -1,21 +1,17 @@
 import Link from "next/link";
-import HistoryCard from "./components/historyCard";
+import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
-export interface HistoryItem {
-  startDate: Date;
-  endDate: Date;
-  company: string;
-  role: string;
-  image: string;
-  description?: string;
-}
 
 const history: HistoryItem[] = [
   {
     startDate: new Date(2024, 10),
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
-    description: "Netizen description",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
     image: "/images/netizen_experience_logo.png",
     role: "Web Development Intern",
   },
@@ -23,7 +19,11 @@ const history: HistoryItem[] = [
     startDate: new Date(2023, 6),
     endDate: new Date(2023, 11),
     company: "TIME",
-    description: "TIME description",
+    description: [
+      "Lorem ipsum dolor sit amet",
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Ut enim ad minim veniam",
+    ],
     image: "/images/time_dotcom_berhad_logo.jpg",
     role: "Operations Support Systems Intern",
   },
