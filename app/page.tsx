@@ -112,16 +112,11 @@ export default function Home() {
       <Separator />
       <div className="flex flex-col items-center w-full max-w-3xl">
         <h2 className="pb-6 text-2xl font-semibold">Education</h2>
-        {education.map((item) => {
-          return (
-            <div
-              key={item.company}
-              className="flex flex-row w-full mb-8 px-4 py-2 border-2"
-            >
-              <HistoryCard {...item}></HistoryCard>
-            </div>
-          );
-        })}
+        <div className="flex flex-col w-full gap-4 mb-8">
+          {education.map((item) => {
+            return <HistoryCard key={item.company} {...item}></HistoryCard>;
+          })}
+        </div>
         <Link
           href={"/transcript.pdf"}
           target="_blank"
