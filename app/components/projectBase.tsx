@@ -2,7 +2,7 @@ import Tag from "@/app/components/tag";
 import { Framework, Language } from "@/app/types/tags";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import HorizontalRule from "./horizontalRule";
+import Separator from "./separator";
 
 export interface ProjectProps {
   title: string;
@@ -65,7 +65,7 @@ export default function ProjectBase({
             <div>{lessons}</div>
           </div>
         </div>
-        <HorizontalRule />
+        <Separator />
       </div>
     </div>
   );
