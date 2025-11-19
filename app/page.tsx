@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full items-center">
       <div className="flex flex-col items-center w-full max-w-3xl">
-        <h1 className="mb-1 mt-6 text-4xl font-bold">Lai Carson</h1>
+        <h1 className="mb-1 mt-6 text-4xl font-bold text-accent">Lai Carson</h1>
         <p>Software Engineer</p>
         <p className="my-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -99,7 +99,9 @@ export default function Home() {
       </div>
       <Separator />
       <div className="flex flex-col items-center w-full max-w-3xl">
-        <h2 className="pb-6 text-2xl font-semibold">Work Experience</h2>
+        <h2 className="pb-6 text-2xl font-semibold text-accent">
+          Work Experience
+        </h2>
         <div className="flex flex-col w-full gap-4 mb-8">
           {workExperience.map((item) => {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
@@ -111,7 +113,7 @@ export default function Home() {
       </div>
       <Separator />
       <div className="flex flex-col items-center w-full max-w-3xl">
-        <h2 className="pb-6 text-2xl font-semibold">Education</h2>
+        <h2 className="pb-6 text-2xl font-semibold text-accent">Education</h2>
         <div className="flex flex-col w-full gap-4 mb-8">
           {education.map((item) => {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
@@ -125,6 +127,7 @@ export default function Home() {
           <Button size="lg">View Academic Transcript</Button>
         </Link>
       </div>
+      <Separator></Separator>
     </div>
   );
 }
