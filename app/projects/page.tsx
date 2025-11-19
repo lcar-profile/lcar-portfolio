@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Tag from "../components/tag";
+import Badge from "../components/badge";
 import { allProjects } from "./data";
 
 export default function Projects() {
@@ -23,7 +23,7 @@ export default function Projects() {
               <span className="font-bold text-lg">{project.title}</span>
               <span className="flex flex-row gap-2">
                 {project.tags.map((tag) => (
-                  <Tag key={tag} label={tag}></Tag>
+                  <Badge key={tag} label={tag}></Badge>
                 ))}
               </span>
               <span>{project.subtitle}</span>

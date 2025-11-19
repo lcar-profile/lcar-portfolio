@@ -1,4 +1,4 @@
-import Tag from "@/app/components/tag";
+import Badge from "@/app/components/badge";
 import { Framework, Language } from "@/app/types/tags";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -35,7 +35,7 @@ export default function ProjectBase({
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row gap-2">
             {tags.map((t) => {
-              return <Tag key={t} label={t}></Tag>;
+              return <Badge key={t} label={t}></Badge>;
             })}
           </div>
           <div className="flex flex-row gap-2">
