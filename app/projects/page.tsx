@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useRef, useState } from "react";
 import Separator from "../components/separator";
+import { Button } from "@/components/ui/button";
 
 export default function Projects() {
   const [api, setApi] = useState<CarouselApi>();
@@ -62,16 +63,18 @@ export default function Projects() {
                     height={1920}
                     alt="Default background"
                   />
-                  <div className="flex flex-col p-3 gap-2 ">
-                    <span className="font-bold text-lg">{project.title}</span>
-                    <span className="flex flex-row gap-2">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} label={tag}></Badge>
-                      ))}
-                    </span>
-                    <span>{project.subtitle}</span>
-                    <Link className="self-center" href={project.path ?? ""}>
-                      See More
+                  <div className="flex flex-col p-3 gap-2 justify-between h-full">
+                    <div className="flex flex-col gap-2 mb-3">
+                      <div className="font-bold text-lg">{project.title}</div>
+                      <div className="flex flex-row gap-2">
+                        {project.tags.map((tag) => (
+                          <Badge key={tag} label={tag}></Badge>
+                        ))}
+                      </div>
+                      <div className="text-ellipsis">{project.subtitle}</div>
+                    </div>
+                    <Link className=" self-center" href={project.path ?? ""}>
+                      <Button>View Project</Button>
                     </Link>
                   </div>
                 </div>

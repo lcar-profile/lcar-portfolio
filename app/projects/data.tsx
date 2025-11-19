@@ -5,7 +5,8 @@ export const allProjects: ProjectProps[] = [
   {
     title: "Reversi Game",
     tags: [Language.JS, Framework.REACT],
-    subtitle: "...",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     path: "/projects/reversi",
     about: "...",
     features: "...",
@@ -14,7 +15,8 @@ export const allProjects: ProjectProps[] = [
   {
     title: "NewsPortal",
     tags: [Language.JS],
-    subtitle: "",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     path: "/projects/newsportal",
     about: "",
     features: "",
@@ -23,7 +25,7 @@ export const allProjects: ProjectProps[] = [
   {
     title: "eWallet Prototype",
     tags: [],
-    subtitle: "/projects/ewallet",
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     path: "",
     about: "",
     features: "",
@@ -32,7 +34,7 @@ export const allProjects: ProjectProps[] = [
   {
     title: "Deep Learning",
     tags: [],
-    subtitle: "",
+    subtitle: "Lorem ipsum dolor sit amet",
     path: "",
     about: "",
     features: "",
