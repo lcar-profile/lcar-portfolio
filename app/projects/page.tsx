@@ -55,8 +55,12 @@ export default function Projects() {
         <CarouselContent>
           {projects.map((project, id) => {
             return (
-              <CarouselItem key={id} className="max-w-sm">
-                <div className="flex flex-col border-1 rounded-sm h-full overflow-hidden">
+              <CarouselItem key={id} className="max-w-lg">
+                <div
+                  className={`flex flex-col h-full border-1 rounded-sm overflow-hidden ${
+                    id !== current - 1 && "brightness-40"
+                  }`}
+                >
                   <Image
                     src="/images/background.png"
                     width={1920}
