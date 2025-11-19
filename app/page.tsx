@@ -15,7 +15,7 @@ const workExperience: HistoryItem[] = [
       "Ut enim ad minim veniam",
     ],
     image: "/images/netizen_experience_logo.png",
-    skills: [Language.TS, Framework.REACT, Framework.NEXT],
+    skills: [Language.TS, Framework.REACT, Framework.NEXT, Framework.TAILWIND],
     role: "Web Development Intern",
   },
   {

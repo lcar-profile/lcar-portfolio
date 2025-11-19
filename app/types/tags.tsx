@@ -9,4 +9,5 @@ export enum Language {
 export enum Framework {
   REACT = "React",
   NEXT = "NextJS",
+  TAILWIND = "Tailwind CSS",
 }

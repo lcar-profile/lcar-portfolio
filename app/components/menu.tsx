@@ -19,7 +19,7 @@ export default function Menu() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between items-center px-10 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg">
+    <div className="w-full flex flex-row justify-between items-center px-10 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg z-10">
       <Link href="/" className="font-bold text-lg">
         Lai Carson
       </Link>

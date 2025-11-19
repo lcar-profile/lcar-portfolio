@@ -29,4 +29,13 @@ export const allProjects: ProjectProps[] = [
     features: "",
     lessons: "",
   },
+  {
+    title: "Deep Learning",
+    tags: [],
+    subtitle: "",
+    path: "",
+    about: "",
+    features: "",
+    lessons: "",
+  },
 ];
