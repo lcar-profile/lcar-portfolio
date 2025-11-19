@@ -1,6 +1,7 @@
 export enum Language {
   PYTHON = "Python",
   JS = "JavaScript",
+  TS = "TypeScript",
   PHP = "PHP",
   BASH = "Bash",
 }
