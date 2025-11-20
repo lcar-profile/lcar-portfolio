@@ -79,7 +79,12 @@ export default function Projects() {
                       </div>
                       <div className="text-ellipsis">{project.subtitle}</div>
                     </div>
-                    <Link className=" self-center" href={project.path ?? ""}>
+                    <Link
+                      className=" self-center"
+                      href={project.path ?? ""}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button>View Project</Button>
                     </Link>
                   </div>

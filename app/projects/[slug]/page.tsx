@@ -17,5 +17,10 @@ export default function ProjectPage({
     notFound();
   }
 
-  return <ProjectBase {...project} />;
+  const index = allProjects.findIndex((p) => p.title === project.title);
+  const prev = index > 0 ? allProjects[index - 1] : null;
+  const next =
+    index < allProjects.length - 1 ? allProjects[index + 1] : null;
+
+  return <ProjectBase {...project} prev={prev} next={next} />;
 }
