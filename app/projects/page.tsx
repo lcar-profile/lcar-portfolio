@@ -40,14 +40,16 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col w-full max-w-3xl items-center">
-      <div className="pb-8">
+      <div className="flex flex-col pb-8 items-center">
         <h1 className="pb-4 text-2xl font-semibold text-accent">Projects</h1>
-        <p>Lorem ipsum</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
       </div>
-
       <Carousel
         setApi={setApi}
-        className="mb-8"
+        className="mb-8 w-full max-w-128"
         opts={{
           loop: true,
         }}
@@ -55,7 +57,7 @@ export default function Projects() {
         <CarouselContent>
           {projects.map((project, id) => {
             return (
-              <CarouselItem key={id} className="max-w-lg">
+              <CarouselItem key={id} className="max-w-96">
                 <div
                   className={`flex flex-col h-full border-1 rounded-sm overflow-hidden ${
                     id !== current - 1 && "brightness-40"

@@ -6,7 +6,7 @@ export const allProjects: ProjectProps[] = [
     title: "Reversi Game",
     tags: [Language.JS, Framework.REACT],
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
     path: "/projects/reversi",
     about: "...",
     features: "...",
@@ -15,8 +15,7 @@ export const allProjects: ProjectProps[] = [
   {
     title: "NewsPortal",
     tags: [Language.JS],
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    subtitle: "Lorem ipsum dolor sit amet",
     path: "/projects/newsportal",
     about: "",
     features: "",
