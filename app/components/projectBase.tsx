@@ -3,6 +3,9 @@ import { Framework, Language } from "@/app/types/tags";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Separator from "./separator";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { Globe, ExternalLink } from "lucide-react";
 
 export interface ProjectProps {
   title: string;
@@ -11,9 +14,7 @@ export interface ProjectProps {
   path: string;
   github?: string;
   live?: string;
-  about: string;
-  features: string;
-  lessons: string;
+  body: string;
 }
 
 export default function ProjectBase({
@@ -23,48 +24,40 @@ export default function ProjectBase({
   path,
   github,
   live,
-  about,
-  features,
-  lessons,
+  body,
 }: ProjectProps) {
   return (
     <div className="flex flex-col w-full max-w-3xl">
-      <div className="flex flex-col pl-4">
-        <h1 className="text-3xl font-bold">{title}</h1>
-        <p className="py-2">{subtitle}</p>
-        <div className="flex flex-row items-center justify-between">
-          <div className="flex flex-row gap-2">
-            {tags.map((t) => {
-              return <Badge key={t} label={t}></Badge>;
-            })}
-          </div>
-          <div className="flex flex-row gap-2">
-            {github ?? <Button>GitHub</Button>}
-            {live ?? <Button>Live</Button>}
-          </div>
-        </div>
-        <div className="relative w-full h-128">
-          <Image
-            src="/images/background.png"
-            fill
-            alt="Default background"
-            className="py-4 object-cover"
-          />
-        </div>
-        <div className="flex flex-col gap-5">
-          <div>
-            <div className="font-semibold text-xl">About</div>
-            <div>{about}</div>
-          </div>
-          <div>
-            <div className="font-semibold text-xl">Features</div>
-            <div>{features}</div>
-          </div>
-          <div>
-            <div className="font-semibold text-xl">Lessons</div>
-            <div>{lessons}</div>
+      <div className="flex flex-col mx-auto px-4 items-center">
+        <div className="flex flex-col gap-2 w-full">
+          <h1 className="text-3xl font-bold text-accent">{title}</h1>
+          <p className="py-2">{subtitle}</p>
+          <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row gap-2">
+              {tags.map((t) => {
+                return <Badge key={t} label={t}></Badge>;
+              })}
+            </div>
+            <div className="flex flex-row gap-2 self-center">
+              {github && (
+                <Button className="flex flex-row gap-1.5">
+                  <FaGithub></FaGithub>
+                  <Link href={github}>GitHub</Link>
+                  <ExternalLink size={2}></ExternalLink>
+                </Button>
+              )}
+              {live && (
+                <Button className="flex flex-row gap-1.5">
+                  <Globe></Globe>
+                  <Link href={live}>Live</Link>
+                  <ExternalLink></ExternalLink>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
+        <Separator></Separator>
+        <div className="flex flex-col gap-5">{body}</div>
         <Separator />
       </div>
     </div>
