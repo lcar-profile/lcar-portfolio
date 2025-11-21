@@ -84,6 +84,7 @@ export default function HistoryCard({
           </div>
           <CollapsibleTrigger asChild>
             <Button className="size-12 bg-transparent">
+              {/* TODO: Refactor into icon button */}
               {isOpen ? (
                 <ChevronUp size={6} className="!size-6"></ChevronUp>
               ) : (

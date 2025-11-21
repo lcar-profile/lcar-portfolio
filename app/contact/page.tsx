@@ -8,7 +8,7 @@ import {
   Check,
 } from "lucide-react";
 import { IconContext, IconType } from "react-icons";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import {
   Collapsible,
@@ -24,17 +24,29 @@ import Separator from "../components/separator";
 interface ContactItem {
   icon: IconType;
   title: string;
-  link: string;
+  subtitle: string;
+  link?: string;
 }
 
-const contactItems = [
+const contactItems: ContactItem[] = [
+  { icon: FaPhoneAlt, title: "Phone", subtitle: "+60 16-212 5882" },
   {
     icon: IoMail,
     title: "Email",
-    link: "mailto:laicarson.swe@gmail.com",
+    subtitle: "laicarson.swe@gmail.com",
   },
-  { icon: FaLinkedin, title: "LinkedIn", link: "http://linkedin.com/in/l-car" },
-  { icon: FaGithub, title: "GitHub", link: "http://github.com/carsnl" },
+  {
+    icon: FaLinkedin,
+    title: "LinkedIn",
+    link: "http://linkedin.com/in/l-car",
+    subtitle: "linkedin.com/in/l-car",
+  },
+  {
+    icon: FaGithub,
+    title: "GitHub",
+    link: "http://github.com/carsnl",
+    subtitle: "github.com/carsnl",
+  },
 ];
 
 function ContactCard({ contacts }: { contacts: ContactItem }) {
@@ -48,73 +60,90 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
     }, 2000);
   }
 
-  return (
-    <a href={contacts.link} target="_blank" rel="noopener noreferrer">
-      <Collapsible
-        open={isOpen}
-        onOpenChange={setIsOpen}
-        className="border-2 p-2 rounded-sm"
-      >
-        <div className="flex flex-row justify-between items-center">
-          <IconContext value={{ size: "36px" }}>
-            <Icon></Icon>
-          </IconContext>
-          <div className="flex flex-row gap-1.5 items-center">
-            <div>{contacts.title}</div>
-            <ExternalLink size={15}></ExternalLink>
+  const CardContent = (
+    <div className="p-4 border-1 rounded-sm bg-foreground/5">
+      {/* TODO: Refactor card into its own component */}
+      <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row items-center gap-3">
+          <div className="bg-primary/30 p-3 rounded-full">
+            <IconContext value={{ size: "22px" }}>
+              <Icon></Icon>
+            </IconContext>
           </div>
-          <CollapsibleTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8"
-              onClick={(e) => {
-                e.preventDefault();
-                setIsOpen((open) => !open);
-              }}
-            >
-              {isOpen ? <ChevronUp></ChevronUp> : <ChevronDown></ChevronDown>}
-              <span className="sr-only">Toggle</span>
-            </Button>
-          </CollapsibleTrigger>
+          <div className="flex flex-col">
+            <div className="flex flex-row gap-1.5 items-center">
+              <div className="font-semibold">{contacts.title}</div>
+              {contacts.link && (
+                <div>
+                  <ExternalLink size={16}></ExternalLink>
+                </div>
+              )}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {contacts.subtitle}
+            </div>
+          </div>
         </div>
-        <CollapsibleContent
-          className="flex mt-1.5 py-2 px-2 rounded-sm items-center bg-red-500 cursor-default"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <div className="m-auto">{contacts.link}</div>
+        <div>
           <Button
-            size={"icon-sm"}
-            onClick={(e) => {
+            className="size-12 bg-transparent"
+            onClick={() => {
               if (!isCopied) {
-                e.preventDefault();
                 setIsCopied(true);
-                navigator.clipboard.writeText(contacts.link);
+                navigator.clipboard.writeText(
+                  contacts.link ?? contacts.subtitle
+                );
                 toast("Copied to clipboard");
               }
             }}
           >
-            {isCopied ? <Check size={16}></Check> : <Copy size={16}></Copy>}
+            {!isCopied ? (
+              <Copy className="!size-5"></Copy>
+            ) : (
+              <Check className="!size-5"></Check>
+            )}
           </Button>
-        </CollapsibleContent>
-      </Collapsible>
+        </div>
+      </div>
+    </div>
+  );
+
+  return contacts.link ? (
+    <a href={contacts.link} target="_blank" rel="noopener noreferrer">
+      {CardContent}
     </a>
+  ) : (
+    CardContent
   );
 }
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center w-full">
-      <h2>Contact me</h2>
-      <h3>Subtitle text here</h3>
-      <Separator />
-      <div className="flex flex-col gap-4 w-full max-w-sm">
-        {contactItems.map((c) => {
-          return <ContactCard key={c.title} contacts={c}></ContactCard>;
-        })}
+    <div className="flex flex-col w-full max-w-3xl mx-auto items-center">
+      <div className="flex flex-col items-center w-full">
+        <h2 className="pb-4 text-2xl font-semibold text-accent">Contact me</h2>
+        <h3>Subtitle text here</h3>
+        <Separator />
+        <div className="flex flex-col gap-4 w-full max-w-sm">
+          {contactItems.map((c) => {
+            return <ContactCard key={c.title} contacts={c}></ContactCard>;
+          })}
+        </div>
       </div>
+      {/* <div className="flex flex-row h-full w-full bg-white text-black">
+        <div className="flex flex-col flex-1">
+          <h2 className="pb-1 text-2xl font-semibold text-accent">
+            Contact me
+          </h2>
+          <h3>Subtitle text here</h3>
+        </div>
+        <div className="flex flex-col flex-1 gap-4 w-full max-w-sm">
+          {contactItems.map((c) => {
+            return <ContactCard key={c.title} contacts={c}></ContactCard>;
+          })}
+        </div>
+      </div> */}
+      <Separator></Separator>
     </div>
   );
 }
