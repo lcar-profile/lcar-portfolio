@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Separator from "../components/separator";
+import IconButton from "../components/iconButton";
 
 interface ContactItem {
   icon: IconType;
@@ -85,9 +86,9 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
           </div>
         </div>
         <div>
-          <Button
-            className="size-12 bg-transparent"
-            onClick={() => {
+          <IconButton
+            screenReader="copy"
+            handleClick={() => {
               if (!isCopied) {
                 setIsCopied(true);
                 navigator.clipboard.writeText(
@@ -102,7 +103,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
             ) : (
               <Check className="!size-5"></Check>
             )}
-          </Button>
+          </IconButton>
         </div>
       </div>
     </div>

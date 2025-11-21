@@ -11,6 +11,7 @@ import React from "react";
 import Image from "next/image";
 import { Framework, Language } from "../types/tags";
 import Badge from "./badge";
+import IconButton from "./iconButton";
 
 export interface HistoryItem {
   startDate: Date;
@@ -83,15 +84,13 @@ export default function HistoryCard({
             )}
           </div>
           <CollapsibleTrigger asChild>
-            <Button className="size-12 bg-transparent">
-              {/* TODO: Refactor into icon button */}
+            <IconButton screenReader="toggle">
               {isOpen ? (
                 <ChevronUp size={6} className="!size-6"></ChevronUp>
               ) : (
                 <ChevronDown size={6} className="!size-6"></ChevronDown>
               )}
-              <span className="sr-only">Toggle</span>
-            </Button>
+            </IconButton>
           </CollapsibleTrigger>
         </div>
         <CollapsibleContent>
