@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import IconButton from "./iconButton";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
@@ -22,14 +23,13 @@ export function ModeToggle() {
   }
 
   return (
-    <Button
-      className="bg-background/20 text-foreground"
-      size={"icon-sm"}
-      onClick={() => {
+    <IconButton
+      screenReader="Toggle Light Mode Dark Mode"
+      handleClick={() => {
         setTheme(isDark ? "light" : "dark");
       }}
     >
       {isDark ? <Sun></Sun> : <Moon></Moon>}
-    </Button>
+    </IconButton>
   );
 }

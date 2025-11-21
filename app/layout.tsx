@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lekton, Space_Mono, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
-import Menu from "./components/menu";
+import NavBar from "./components/navBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -31,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${manrope.className} antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
@@ -38,8 +41,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Menu></Menu>
-          <div className="flex px-10 py-6 mt-16 justify-center">{children}</div>
+          <NavBar></NavBar>
+          <div className="flex px-5 md:px-10 py-6 mt-16 justify-center">
+            {children}
+          </div>
           <Toaster></Toaster>
         </ThemeProvider>
       </body>

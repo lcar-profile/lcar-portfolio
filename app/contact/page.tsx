@@ -1,24 +1,11 @@
 "use client";
 
-import {
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Copy,
-  Check,
-} from "lucide-react";
+import { ExternalLink, Copy, Check } from "lucide-react";
 import { IconContext, IconType } from "react-icons";
 import { FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { toast } from "sonner";
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useState } from "react";
 import Separator from "../components/separator";
 import IconButton from "../components/iconButton";
 import Card from "../components/card";
