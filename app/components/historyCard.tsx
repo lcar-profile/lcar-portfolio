@@ -12,6 +12,7 @@ import Image from "next/image";
 import { Framework, Language } from "../types/tags";
 import Badge from "./badge";
 import IconButton from "./iconButton";
+import Card from "./card";
 
 export interface HistoryItem {
   startDate: Date;
@@ -35,7 +36,7 @@ export default function HistoryCard({
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className="flex flex-col w-full p-4 border-1 rounded-sm bg-foreground/5">
+    <Card>
       <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
@@ -102,6 +103,6 @@ export default function HistoryCard({
           </ul>
         </CollapsibleContent>
       </Collapsible>
-    </div>
+    </Card>
   );
 }

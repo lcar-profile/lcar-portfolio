@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Separator from "../components/separator";
 import IconButton from "../components/iconButton";
+import Card from "../components/card";
 
 interface ContactItem {
   icon: IconType;
@@ -62,8 +63,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
   }
 
   const CardContent = (
-    <div className="p-4 border-1 rounded-sm bg-foreground/5">
-      {/* TODO: Refactor card into its own component */}
+    <Card>
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-3">
           <div className="bg-primary/30 p-3 rounded-full">
@@ -106,7 +106,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
           </IconButton>
         </div>
       </div>
-    </div>
+    </Card>
   );
 
   return contacts.link ? (
