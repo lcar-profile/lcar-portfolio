@@ -74,6 +74,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
         </div>
         <div>
           <IconButton
+            size={5}
             screenReader="copy"
             handleClick={() => {
               if (!isCopied) {

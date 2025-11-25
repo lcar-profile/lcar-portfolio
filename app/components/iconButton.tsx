@@ -1,20 +1,28 @@
 import { forwardRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ReactNode } from "react";
+import { ReactNode, ComponentPropsWithoutRef } from "react";
+import { cn } from "@/lib/utils";
 
-interface IconButtonProps {
+type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
   children: ReactNode;
+  size?: number;
   handleClick?: () => void;
   screenReader: string;
-}
+};
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ children, handleClick, screenReader, ...props }, ref) => {
+  (
+    { children, size = 12, handleClick, screenReader, className, ...props },
+    ref
+  ) => {
     return (
       <Button
         ref={ref}
         {...props}
-        className="size-12 bg-transparent hover:bg-primary/50"
+        className={cn(
+          `size-${size} bg-transparent hover:bg-primary/50 !p-2`,
+          className
+        )}
         {...(handleClick && { onClick: handleClick })}
       >
         {children}

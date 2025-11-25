@@ -87,11 +87,11 @@ export default function HistoryCard({
             )}
           </div>
           <CollapsibleTrigger asChild>
-            <IconButton screenReader="toggle">
+            <IconButton screenReader="toggle" size={5}>
               {isOpen ? (
-                <ChevronUp size={6} className="!size-6"></ChevronUp>
+                <ChevronUp className="!size-5"></ChevronUp>
               ) : (
-                <ChevronDown size={6} className="!size-6"></ChevronDown>
+                <ChevronDown className="!size-5"></ChevronDown>
               )}
             </IconButton>
           </CollapsibleTrigger>
