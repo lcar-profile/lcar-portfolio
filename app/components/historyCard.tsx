@@ -41,15 +41,17 @@ export default function HistoryCard({
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
             <div className="flex flex-row gap-2 items-center">
-              {image && (
-                <Image
-                  src={image}
-                  width={60}
-                  height={60}
-                  alt={"logo"}
-                  className="mr-2 rounded-sm"
-                ></Image>
-              )}
+              <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
+                {image && (
+                  <Image
+                    src={image}
+                    width={60}
+                    height={60}
+                    alt={"logo"}
+                    className="rounded-sm object-contain"
+                  ></Image>
+                )}
+              </div>
               <div className="flex flex-col">
                 <div className="font-semibold text-lg">{company}</div>
                 <div className="flex flex-row gap-2 items-center">
@@ -77,7 +79,7 @@ export default function HistoryCard({
               </div>
             </div>
             {skills && (
-              <div className="flex flex-row gap-2 mt-2">
+              <div className="flex flex-row gap-2 mt-2 flex-wrap">
                 {skills.map((s) => {
                   return <Badge key={s} label={s}></Badge>;
                 })}
