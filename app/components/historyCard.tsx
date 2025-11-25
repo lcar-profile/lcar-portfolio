@@ -41,8 +41,8 @@ export default function HistoryCard({
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
             <div className="flex flex-row gap-2 items-center">
-              <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
-                {image && (
+              {image && (
+                <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
                   <Image
                     src={image}
                     width={60}
@@ -50,8 +50,8 @@ export default function HistoryCard({
                     alt={"logo"}
                     className="rounded-sm object-contain"
                   ></Image>
-                )}
-              </div>
+                </div>
+              )}
               <div className="flex flex-col">
                 <div className="font-semibold text-lg">{company}</div>
                 <div className="flex flex-row gap-2 items-center">
