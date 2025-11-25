@@ -61,26 +61,31 @@ export default function ProjectPage({
         <Separator></Separator>
         <div className="flex flex-col gap-5">{body}</div>
         <Separator />
-        <div className="flex flex-row w-full items-center justify-between">
-          <div>
-            {prev && (
-              <div className="flex flex-row items-center gap-1">
-                <ArrowLeft size={12}></ArrowLeft>
-                <Link href={prev.path} className="self-start text-sm">
-                  {prev.title}
-                </Link>
-              </div>
-            )}
+        <div className="flex flex-col w-full gap-4 items-center">
+          <div className="text-muted-foreground text-sm">
+            View other projects
           </div>
-          <div>
-            {next && (
-              <div className="flex flex-row items-center gap-1">
-                <Link href={next.path} className="self-end text-sm">
-                  {next.title}
-                </Link>
-                <ArrowRight size={12}></ArrowRight>
-              </div>
-            )}
+          <div className="flex flex-row w-full items-center justify-between">
+            <div>
+              {prev && (
+                <div className="flex flex-row items-center gap-1">
+                  <ArrowLeft size={12}></ArrowLeft>
+                  <Link href={prev.path} className="self-start text-sm">
+                    {prev.title}
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div>
+              {next && (
+                <div className="flex flex-row items-center gap-1">
+                  <Link href={next.path} className="self-end text-sm">
+                    {next.title}
+                  </Link>
+                  <ArrowRight size={12}></ArrowRight>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
