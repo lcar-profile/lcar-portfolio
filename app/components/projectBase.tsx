@@ -31,7 +31,7 @@ export default function ProjectBase({
   next,
 }: ProjectProps) {
   return (
-    <div className="flex flex-col w-full max-w-3xl">
+    <div className="flex flex-col w-full max-w-4xl">
       <div className="flex flex-col mx-auto px-4 items-center">
         <div className="flex flex-col gap-2 w-full">
           <h1 className="text-3xl font-bold text-accent">{title}</h1>

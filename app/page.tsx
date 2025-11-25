@@ -82,8 +82,8 @@ const education: HistoryItem[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full items-center">
-      <div className="flex flex-col items-center w-full max-w-3xl">
+    <div className="flex flex-col w-full max-w-4xl items-center">
+      <div className="flex flex-col items-center w-full">
         <h1 className="mb-1 mt-6 text-4xl font-bold text-accent">Lai Carson</h1>
         <p>Software Engineer</p>
         <p className="my-6">

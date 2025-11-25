@@ -108,7 +108,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
 
 export default function Contact() {
   return (
-    <div className="flex flex-col w-full max-w-3xl mx-auto items-center">
+    <div className="flex flex-col w-full max-w-4xl mx-auto items-center">
       <div className="flex flex-col items-center w-full">
         <h2 className="pb-4 text-2xl font-semibold text-accent">Contact me</h2>
         <h3>Subtitle text here</h3>
