@@ -71,7 +71,7 @@ export default function NavBar() {
                   className={`${
                     isCurrentPath
                       ? "font-bold underline underline-offset-4"
-                      : "hover:bg-primary/30"
+                      : "hover:bg-foreground/15"
                   } px-3 py-2 rounded-sm`}
                 >
                   {item.label}

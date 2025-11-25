@@ -20,7 +20,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         {...props}
         className={cn(
-          `size-${size} bg-transparent hover:bg-primary/50 !p-2`,
+          `size-${size} text-foreground bg-transparent hover:bg-foreground/15 !p-2`,
           className
         )}
         {...(handleClick && { onClick: handleClick })}

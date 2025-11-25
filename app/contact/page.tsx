@@ -52,7 +52,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
     <Card>
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-3">
-          <div className="bg-primary/30 p-3 rounded-full">
+          <div className="bg-foreground/20 p-3 rounded-full">
             <IconContext value={{ size: "22px" }}>
               <Icon></Icon>
             </IconContext>
