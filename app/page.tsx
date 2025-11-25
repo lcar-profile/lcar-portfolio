@@ -6,6 +6,7 @@ import { Framework, Language } from "./types/tags";
 
 const workExperience: HistoryItem[] = [
   {
+    type: "work",
     startDate: new Date(2024, 10),
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
@@ -19,6 +20,7 @@ const workExperience: HistoryItem[] = [
     role: "Web Development Intern",
   },
   {
+    type: "work",
     startDate: new Date(2023, 6),
     endDate: new Date(2023, 11),
     company: "TIME",
@@ -32,6 +34,7 @@ const workExperience: HistoryItem[] = [
     role: "Operations Support Systems Intern",
   },
   {
+    type: "work",
     startDate: new Date(2021, 3),
     endDate: new Date(2022, 1),
     company: "Raja Eleena Siew Ang & Associates",
@@ -46,6 +49,7 @@ const workExperience: HistoryItem[] = [
 
 const education: HistoryItem[] = [
   {
+    type: "education",
     startDate: new Date(2020, 9),
     endDate: new Date(2025, 10),
     company: "Monash University",
@@ -57,6 +61,7 @@ const education: HistoryItem[] = [
     ],
   },
   {
+    type: "education",
     startDate: new Date(2019, 0),
     endDate: new Date(2020, 5),
     company: "Taylor's College",
@@ -68,6 +73,7 @@ const education: HistoryItem[] = [
     ],
   },
   {
+    type: "education",
     startDate: new Date(2014, 0),
     endDate: new Date(2018, 11),
     company: "SMK Bandar Utama Damansara 3",
@@ -97,7 +103,7 @@ export default function Home() {
         </Link>
       </div>
       <Separator />
-      <div className="flex flex-col items-center w-full max-w-3xl">
+      <div className="flex flex-col items-center w-full">
         <h2 className="pb-6 text-2xl font-semibold text-accent">
           Work Experience
         </h2>
@@ -111,7 +117,7 @@ export default function Home() {
         </Link>
       </div>
       <Separator />
-      <div className="flex flex-col items-center w-full max-w-3xl">
+      <div className="flex flex-col items-center w-full">
         <h2 className="pb-6 text-2xl font-semibold text-accent">Education</h2>
         <div className="flex flex-col w-full gap-4 mb-8">
           {education.map((item) => {

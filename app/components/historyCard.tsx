@@ -6,7 +6,13 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
-import { ChevronUp, ChevronDown, User, Calendar } from "lucide-react";
+import {
+  ChevronUp,
+  ChevronDown,
+  User,
+  GraduationCap,
+  Calendar,
+} from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import { Framework, Language } from "../types/tags";
@@ -15,6 +21,7 @@ import IconButton from "./iconButton";
 import Card from "./card";
 
 export interface HistoryItem {
+  type: "work" | "education";
   startDate: Date;
   endDate: Date;
   company: string;
@@ -25,6 +32,7 @@ export interface HistoryItem {
 }
 
 export default function HistoryCard({
+  type,
   startDate,
   endDate,
   company,
@@ -55,7 +63,11 @@ export default function HistoryCard({
               <div className="flex flex-col">
                 <div className="font-semibold text-lg">{company}</div>
                 <div className="flex flex-row gap-2 items-center">
-                  <User size={20}></User>
+                  {type == "work" ? (
+                    <User size={20} />
+                  ) : (
+                    <GraduationCap size={20} />
+                  )}
                   <div>{role}</div>
                 </div>
                 <div className="flex flex-row gap-2 items-center">
