@@ -1,5 +1,14 @@
-import { ProjectProps } from "../components/projectBase";
 import { Framework, Language } from "../types/tags";
+
+export interface ProjectProps {
+  title: string;
+  subtitle: string;
+  tags: (Language | Framework)[];
+  path: string;
+  github?: string;
+  live?: string;
+  body: string;
+}
 
 export const allProjects: ProjectProps[] = [
   {
