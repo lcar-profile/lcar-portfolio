@@ -36,13 +36,13 @@ export default function ProjectBase({
         <div className="flex flex-col gap-2 w-full">
           <h1 className="text-3xl font-bold text-accent">{title}</h1>
           <p className="py-2">{subtitle}</p>
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
             <div className="flex flex-row gap-2">
               {tags.map((t) => {
                 return <Badge key={t} label={t}></Badge>;
               })}
             </div>
-            <div className="flex flex-row gap-2 self-center">
+            <div className="flex flex-row gap-2">
               {github && (
                 <Button className="flex flex-row gap-1.5">
                   <FaGithub></FaGithub>
