@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
   children: ReactNode;
   size?: number;
-  handleClick?: () => void;
+  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   screenReader: string;
 };
 

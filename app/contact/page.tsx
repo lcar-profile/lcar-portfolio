@@ -39,7 +39,6 @@ const contactItems: ContactItem[] = [
 ];
 
 function ContactCard({ contacts }: { contacts: ContactItem }) {
-  const [isOpen, setIsOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const Icon = contacts.icon;
 
@@ -76,8 +75,9 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
           <IconButton
             size={5}
             screenReader="copy"
-            handleClick={() => {
+            handleClick={(e) => {
               if (!isCopied) {
+                e.preventDefault();
                 setIsCopied(true);
                 navigator.clipboard.writeText(
                   contacts.link ?? contacts.subtitle
