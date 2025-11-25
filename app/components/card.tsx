@@ -1,11 +1,14 @@
-import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 
-interface CardProps {
+interface CardProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
 }
 
-export default function Card({ children }: CardProps) {
+export default function Card({ className, children }: CardProps) {
   return (
-    <div className="p-4 border-1 rounded-sm bg-foreground/5">{children}</div>
+    <div className={cn("p-4 border-1 rounded-sm bg-foreground/5", className)}>
+      {children}
+    </div>
   );
 }

@@ -3,17 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "./toggle";
-import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import IconButton from "./iconButton";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
+import HoverLink from "./hoverLink";
 
 interface MenuItem {
   label: string;
@@ -66,16 +64,14 @@ export default function NavBar() {
                 : path.startsWith(item.pathname);
             return (
               <li key={item.pathname}>
-                <Link
+                <HoverLink
                   href={item.pathname}
                   className={`${
-                    isCurrentPath
-                      ? "font-bold underline underline-offset-4"
-                      : "hover:bg-foreground/15"
+                    isCurrentPath && "font-bold underline underline-offset-4"
                   } px-3 py-2 rounded-sm`}
                 >
                   {item.label}
-                </Link>
+                </HoverLink>
               </li>
             );
           })}

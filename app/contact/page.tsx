@@ -49,7 +49,9 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
   }
 
   const CardContent = (
-    <Card>
+    <Card
+      className={contacts.link && `hover:border-primary hover:text-primary`}
+    >
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-3">
           <div className="bg-foreground/20 p-3 rounded-full">
@@ -58,7 +60,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
             </IconContext>
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-row gap-1.5 items-center">
+            <div className="flex flex-row gap-1 items-center">
               <div className="font-semibold">{contacts.title}</div>
               {contacts.link && (
                 <div>
@@ -111,7 +113,7 @@ export default function Contact() {
     <div className="flex flex-col w-full max-w-4xl mx-auto items-center">
       <div className="flex flex-col items-center w-full">
         <h2 className="pb-4 text-2xl font-semibold text-accent">Contact me</h2>
-        <h3>Subtitle text here</h3>
+        <h3 className="text-sm">Subtitle text here</h3>
         <Separator />
         <div className="flex flex-col gap-4 w-full max-w-sm">
           {contactItems.map((c) => {
@@ -119,19 +121,6 @@ export default function Contact() {
           })}
         </div>
       </div>
-      {/* <div className="flex flex-row h-full w-full bg-white text-black">
-        <div className="flex flex-col flex-1">
-          <h2 className="pb-1 text-2xl font-semibold text-accent">
-            Contact me
-          </h2>
-          <h3>Subtitle text here</h3>
-        </div>
-        <div className="flex flex-col flex-1 gap-4 w-full max-w-sm">
-          {contactItems.map((c) => {
-            return <ContactCard key={c.title} contacts={c}></ContactCard>;
-          })}
-        </div>
-      </div> */}
       <Separator></Separator>
     </div>
   );

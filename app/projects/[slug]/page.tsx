@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import Separator from "@/app/components/separator";
+import HoverLink from "@/app/components/hoverLink";
 
 export default function ProjectPage({
   params,
@@ -33,7 +34,7 @@ export default function ProjectPage({
       <div className="flex flex-col mx-auto px-4 items-center">
         <div className="flex flex-col gap-2 w-full">
           <h1 className="text-3xl font-bold text-accent">{title}</h1>
-          <p className="py-2">{subtitle}</p>
+          <p className="mb-2 text-sm text-muted-foreground">{subtitle}</p>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
             <div className="flex flex-row gap-2">
               {tags.map((t) => {
@@ -68,22 +69,24 @@ export default function ProjectPage({
           <div className="flex flex-row w-full items-center justify-between">
             <div>
               {prev && (
-                <div className="flex flex-row items-center gap-1">
+                <HoverLink
+                  href={prev.path}
+                  className="self-start text-sm flex flex-row items-center gap-1"
+                >
                   <ArrowLeft size={12}></ArrowLeft>
-                  <Link href={prev.path} className="self-start text-sm">
-                    {prev.title}
-                  </Link>
-                </div>
+                  {prev.title}
+                </HoverLink>
               )}
             </div>
             <div>
               {next && (
-                <div className="flex flex-row items-center gap-1">
-                  <Link href={next.path} className="self-end text-sm">
-                    {next.title}
-                  </Link>
+                <HoverLink
+                  href={next.path}
+                  className="self-end text-sm flex flex-row items-center gap-1"
+                >
+                  {next.title}
                   <ArrowRight size={12}></ArrowRight>
-                </div>
+                </HoverLink>
               )}
             </div>
           </div>

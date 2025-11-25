@@ -42,10 +42,10 @@ export default function Projects() {
     <div className="flex flex-col w-full max-w-4xl items-center">
       <div className="flex flex-col pb-8 items-center">
         <h1 className="pb-4 text-2xl font-semibold text-accent">Projects</h1>
-        <p>
+        <h3 className="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua
-        </p>
+        </h3>
       </div>
       <Carousel
         setApi={setApi}
@@ -59,8 +59,8 @@ export default function Projects() {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
                 <div
-                  className={`flex flex-col h-full border-1 rounded-sm overflow-hidden ${
-                    id !== current - 1 && "brightness-40"
+                  className={`flex flex-col h-full bg-background border-1 rounded-sm overflow-hidden ${
+                    id === current - 1 && "border-primary border-2"
                   }`}
                 >
                   <Image
@@ -102,7 +102,7 @@ export default function Projects() {
             <div
               key={id}
               className={`w-4 h-4 rounded-xl ${
-                id === current - 1 ? "bg-accent" : "bg-muted"
+                id === current - 1 ? "bg-accent" : "bg-muted-foreground"
               }`}
             ></div>
           );
