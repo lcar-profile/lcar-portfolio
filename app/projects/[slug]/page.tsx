@@ -45,14 +45,18 @@ export default function ProjectPage({
               {github && (
                 <Button className="flex flex-row gap-1.5">
                   <FaGithub></FaGithub>
-                  <Link href={github}>GitHub</Link>
+                  <Link href={github} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </Link>
                   <ExternalLink></ExternalLink>
                 </Button>
               )}
               {live && (
                 <Button className="flex flex-row gap-1.5">
                   <Globe></Globe>
-                  <Link href={live}>Live</Link>
+                  <Link href={live} target="_blank" rel="noopener noreferrer">
+                    Live
+                  </Link>
                   <ExternalLink></ExternalLink>
                 </Button>
               )}
