@@ -23,7 +23,7 @@ export default function ProjectPage({
     notFound();
   }
 
-  const { title, subtitle, tags, path, github, live, body } = project;
+  const { title, subtitle, tags, github, live, body } = project;
 
   const index = allProjects.findIndex((p) => p.title === title);
   const prev = index > 0 ? allProjects[index - 1] : null;
@@ -43,21 +43,21 @@ export default function ProjectPage({
             </div>
             <div className="flex flex-row gap-2">
               {github && (
-                <Button className="flex flex-row gap-1.5">
-                  <FaGithub></FaGithub>
+                <Button className="flex flex-row gap-1.5" asChild>
                   <Link href={github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub></FaGithub>
                     GitHub
+                    <ExternalLink></ExternalLink>
                   </Link>
-                  <ExternalLink></ExternalLink>
                 </Button>
               )}
               {live && (
-                <Button className="flex flex-row gap-1.5">
-                  <Globe></Globe>
+                <Button className="flex flex-row gap-1.5" asChild>
                   <Link href={live} target="_blank" rel="noopener noreferrer">
+                    <Globe></Globe>
                     Live
+                    <ExternalLink></ExternalLink>
                   </Link>
-                  <ExternalLink></ExternalLink>
                 </Button>
               )}
             </div>

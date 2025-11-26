@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Separator from "../components/separator";
 import { Button } from "@/components/ui/button";
 
@@ -20,8 +20,6 @@ export default function Projects() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const ref = useRef(false);
-  const [didMount, setDidMount] = useState(false);
   const projects = allProjects;
 
   useEffect(() => {
@@ -64,7 +62,7 @@ export default function Projects() {
                   }`}
                 >
                   <Image
-                    src="/images/background.png"
+                    src={project.image ?? "/images/background.png"}
                     width={1920}
                     height={1920}
                     alt="Default background"

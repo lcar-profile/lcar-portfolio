@@ -4,6 +4,7 @@ export interface ProjectProps {
   title: string;
   subtitle: string;
   tags: (Language | Framework)[];
+  image?: string;
   path: string;
   github?: string;
   live?: string;
@@ -16,6 +17,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.JS, Framework.REACT],
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    image: "/images/reversi_thumbnail.jpg",
     path: "/projects/reversi",
     github: "https://github.com/lcar-showcase/lcar-game-demo",
     live: "https://lcar-showcase.github.io/lcar-game-demo/",
