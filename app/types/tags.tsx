@@ -2,12 +2,20 @@ export enum Language {
   PYTHON = "Python",
   JS = "JavaScript",
   TS = "TypeScript",
+  JAVA = "Java",
   PHP = "PHP",
+  DART = "Dart",
+  KOTLIN = "Kotlin",
   BASH = "Bash",
+  HTML = "HTML",
+  CSS = "CSS",
 }
 
 export enum Framework {
   REACT = "React",
-  NEXT = "NextJS",
+  NEXT = "Next.js",
   TAILWIND = "Tailwind CSS",
+  NODE = "Node.js",
+  FLUTTER = "Flutter",
+  COMPOSE = "Jetpack Compose",
 }

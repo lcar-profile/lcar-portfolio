@@ -70,7 +70,7 @@ export default function Projects() {
                   <div className="flex flex-col p-3 gap-2 justify-between h-full">
                     <div className="flex flex-col gap-2 mb-3">
                       <div className="font-bold text-lg">{project.title}</div>
-                      <div className="flex flex-row gap-2">
+                      <div className="flex flex-row gap-2 flex-wrap">
                         {project.tags.map((tag) => (
                           <Badge key={tag} label={tag}></Badge>
                         ))}

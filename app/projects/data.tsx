@@ -3,7 +3,7 @@ import { Framework, Language } from "../types/tags";
 export interface ProjectProps {
   title: string;
   subtitle: string;
-  tags: (Language | Framework)[];
+  tags: (Language | Framework | string)[];
   image?: string;
   path: string;
   github?: string;
@@ -14,7 +14,7 @@ export interface ProjectProps {
 export const allProjects: ProjectProps[] = [
   {
     title: "Reversi Game",
-    tags: [Language.JS, Framework.REACT],
+    tags: [Language.TS, Framework.REACT, Language.HTML, Language.CSS],
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
     image: "/images/reversi_thumbnail.jpg",
@@ -25,7 +25,7 @@ export const allProjects: ProjectProps[] = [
   },
   {
     title: "NewsPortal",
-    tags: [Language.JS],
+    tags: [Language.JS, Language.HTML, Language.CSS, Framework.NODE],
     subtitle: "Lorem ipsum dolor sit amet",
     image: "/images/newsportal_thumbnail.jpg",
     path: "/projects/newsportal",
@@ -33,8 +33,8 @@ export const allProjects: ProjectProps[] = [
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
-    title: "E-wallet Prototype",
-    tags: [],
+    title: "E-Wallet Prototype",
+    tags: [Language.DART, Framework.FLUTTER],
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     image: "/images/ewallet_thumbnail.jpg",
     path: "/projects/ewallet",
@@ -42,7 +42,7 @@ export const allProjects: ProjectProps[] = [
   },
   {
     title: "Nutrition Assistant",
-    tags: [],
+    tags: [Language.KOTLIN, Framework.COMPOSE],
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     image: "/images/nutricoach_thumbnail.jpg",
     path: "/projects/nutrition-assistant",
@@ -51,20 +51,11 @@ export const allProjects: ProjectProps[] = [
   },
   {
     title: "Pokemon Roguelike",
-    tags: [],
+    tags: [Language.JAVA],
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     image: "/images/pokemon_thumbnail.jpg",
     path: "/projects/pokemon-roguelike",
     github: "https://github.com/carsnl/RoguelikePokemon",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-  {
-    title: "Data Analytics",
-    tags: [],
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    image: "/images/data_analytics_thumbnail.jpg",
-    path: "/projects/data-analytics",
-    github: "hhttps://github.com/carsnl/lcar-analytics",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
 ];
