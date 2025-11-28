@@ -99,7 +99,9 @@ export default function Home() {
           aliquip ex ea commodo consequat.
         </p>
         <Link href={"/contact"} className="my-2">
-          <Button size="lg">Contact Me</Button>
+          <Button size="lg" variant="default">
+            Contact Me
+          </Button>
         </Link>
       </div>
       <Separator />
@@ -113,7 +115,9 @@ export default function Home() {
           })}
         </div>
         <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
-          <Button size="lg">View Resume</Button>
+          <Button size="lg" variant="default">
+            View Resume
+          </Button>
         </Link>
       </div>
       <Separator />
@@ -129,7 +133,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button size="lg">View Academic Transcript</Button>
+          <Button size="lg" variant="default">
+            View Academic Transcript
+          </Button>
         </Link>
       </div>
       <Separator></Separator>
