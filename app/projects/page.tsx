@@ -13,6 +13,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import { Globe } from "lucide-react";
 import Separator from "../components/separator";
 import { Button } from "@/components/ui/button";
 
@@ -69,7 +71,29 @@ export default function Projects() {
                   />
                   <div className="flex flex-col p-3 gap-2 justify-between h-full">
                     <div className="flex flex-col gap-2 mb-3">
-                      <div className="font-bold text-lg">{project.title}</div>
+                      <div className="flex flex-row items-center gap-2">
+                        <div className="font-bold text-lg">{project.title}</div>
+                        {(project.github || project.live) && (
+                          <div className="flex flex-row gap-1 bg-foreground text-background p-1 rounded-full items-center justify-center">
+                            {project.github && (
+                              <div
+                                title="Repository available"
+                                aria-label="Repository available"
+                              >
+                                <FaGithub size={14} />
+                              </div>
+                            )}
+                            {project.live && (
+                              <div
+                                title="Live version available"
+                                aria-label="Live version available"
+                              >
+                                <Globe size={14} />
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
                       <div className="flex flex-row gap-2 flex-wrap">
                         {project.tags.map((tag) => (
                           <Badge key={tag} label={tag}></Badge>
