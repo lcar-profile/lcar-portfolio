@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Framework, Language } from "../types/tags";
 
 export interface ProjectProps {
@@ -8,7 +9,7 @@ export interface ProjectProps {
   path: string;
   github?: string;
   live?: string;
-  body: string;
+  body: ReactNode;
 }
 
 export const allProjects: ProjectProps[] = [
@@ -21,7 +22,25 @@ export const allProjects: ProjectProps[] = [
     path: "/projects/reversi",
     github: "https://github.com/lcar-showcase/lcar-game-demo",
     live: "https://lcar-showcase.github.io/lcar-game-demo/",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul className="list-disc pl-5">
+          <li>Ut enim ad minim veniam</li>
+          <li>quis nostrud exercitation ullamco laboris</li>
+          <li>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </li>
+        </ul>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+      </>
+    ),
   },
   {
     title: "NewsPortal",
@@ -30,7 +49,25 @@ export const allProjects: ProjectProps[] = [
     image: "/images/newsportal_thumbnail.jpg",
     path: "/projects/newsportal",
     github: "https://github.com/carsnl/NewsPortal",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul className="list-disc pl-5">
+          <li>Ut enim ad minim veniam</li>
+          <li>quis nostrud exercitation ullamco laboris</li>
+          <li>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </li>
+        </ul>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+      </>
+    ),
   },
   {
     title: "E-Wallet Prototype",
@@ -38,7 +75,25 @@ export const allProjects: ProjectProps[] = [
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     image: "/images/ewallet_thumbnail.jpg",
     path: "/projects/ewallet",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul className="list-disc pl-5">
+          <li>Ut enim ad minim veniam</li>
+          <li>quis nostrud exercitation ullamco laboris</li>
+          <li>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </li>
+        </ul>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+      </>
+    ),
   },
   {
     title: "Nutrition Assistant",
@@ -47,7 +102,25 @@ export const allProjects: ProjectProps[] = [
     image: "/images/nutricoach_thumbnail.jpg",
     path: "/projects/nutrition-assistant",
     github: "https://github.com/carsnl/NutritionAssistant",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul className="list-disc pl-5">
+          <li>Ut enim ad minim veniam</li>
+          <li>quis nostrud exercitation ullamco laboris</li>
+          <li>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </li>
+        </ul>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+      </>
+    ),
   },
   {
     title: "Pokemon Roguelike",
@@ -56,6 +129,24 @@ export const allProjects: ProjectProps[] = [
     image: "/images/pokemon_thumbnail.jpg",
     path: "/projects/pokemon-roguelike",
     github: "https://github.com/carsnl/RoguelikePokemon",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <ul className="list-disc pl-5">
+          <li>Ut enim ad minim veniam</li>
+          <li>quis nostrud exercitation ullamco laboris</li>
+          <li>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur
+          </li>
+        </ul>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+      </>
+    ),
   },
 ];
