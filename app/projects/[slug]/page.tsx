@@ -43,7 +43,11 @@ export default function ProjectPage({
             </div>
             <div className="flex flex-row gap-2">
               {github && (
-                <Button className="flex flex-row gap-1.5" asChild>
+                <Button
+                  className="flex flex-row gap-1.5"
+                  variant={"default"}
+                  asChild
+                >
                   <Link href={github} target="_blank" rel="noopener noreferrer">
                     <FaGithub></FaGithub>
                     GitHub
@@ -52,7 +56,11 @@ export default function ProjectPage({
                 </Button>
               )}
               {live && (
-                <Button className="flex flex-row gap-1.5" asChild>
+                <Button
+                  className="flex flex-row gap-1.5"
+                  variant="outline"
+                  asChild
+                >
                   <Link href={live} target="_blank" rel="noopener noreferrer">
                     <Globe></Globe>
                     Live
