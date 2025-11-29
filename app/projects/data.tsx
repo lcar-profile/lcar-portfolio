@@ -20,8 +20,8 @@ export const allProjects: ProjectProps[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
     image: "/images/reversi_thumbnail.jpg",
     path: "/projects/reversi",
-    github: "https://github.com/lcar-showcase/lcar-game-demo",
-    live: "https://lcar-showcase.github.io/lcar-game-demo/",
+    github: "https://github.com/lcar-showcase/lcar-rg",
+    live: "http://lcar-showcase.github.io/lcar-rg/",
     body: (
       <>
         <p>
