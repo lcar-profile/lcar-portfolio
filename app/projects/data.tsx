@@ -61,27 +61,32 @@ export const allProjects: ProjectProps[] = [
   {
     title: "NewsPortal",
     tags: [Language.JS, Language.HTML, Language.CSS, Framework.NODE],
-    subtitle: "Lorem ipsum dolor sit amet",
+    subtitle: "A web application that aggregates news articles",
     image: "/images/newsportal_thumbnail.jpg",
     path: "/projects/newsportal",
     github: "https://github.com/carsnl/NewsPortal",
     body: (
       <>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          NewsPortal is a web application that aggregates online news articles
+          from a variety of reputable sources and displays them all in a single
+          infinite scrolling page. Users can click on any article to read more,
+          which redirects them to the original publisher&apos;s domain. Searches
+          can be customised by with specific keywords and filters.
         </p>
-        <ul className="list-disc pl-5">
-          <li>Ut enim ad minim veniam</li>
-          <li>quis nostrud exercitation ullamco laboris</li>
-          <li>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur
-          </li>
-        </ul>
-        <p>Excepteur sint occaecat cupidatat non proident.</p>
+        <p>
+          At the time this project began, most of my university courses used
+          Python. This project served as an introduction to the fundamentals of
+          web development, allowing me to use JavaScript, HTML and CSS to build
+          proper user interfaces, rather than relying on Python and Java
+          libraries.
+        </p>
+        <p>
+          A simple Node.js back-end was later added to prevent exposing an API
+          key in the client-side script and code repository. All requests to the
+          external endpoint were subsequently handled by the backend for added
+          security.
+        </p>
       </>
     ),
   },
