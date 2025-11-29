@@ -16,8 +16,7 @@ export const allProjects: ProjectProps[] = [
   {
     title: "Reversi Game",
     tags: [Language.TS, Framework.REACT, Language.HTML, Language.CSS],
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    subtitle: "A web-based implementation of the popular Reversi board game",
     image: "/images/reversi_thumbnail.jpg",
     path: "/projects/reversi",
     github: "https://github.com/lcar-showcase/lcar-rg",
@@ -25,20 +24,37 @@ export const allProjects: ProjectProps[] = [
     body: (
       <>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          This Reversi game features a single-player mode, where users play
+          against a computer opponent. It previously supported loading saved
+          games, but this feature is temporarily disabled.
+        </p>
+        <p>
+          This project was developed during my previous internship as part of an
+          onboarding module, with guidance from an experienced front-end
+          developer, to prepare me for internal company work.
+        </p>
+        <p>
+          The main goal of the project was to improve my front-end web
+          development skills by working with languages, frameworks, and tools
+          like TypeScript, React, and Node Package Manager (npm). I also learned
+          important front-end development concepts such as:
         </p>
         <ul className="list-disc pl-5">
-          <li>Ut enim ad minim veniam</li>
-          <li>quis nostrud exercitation ullamco laboris</li>
-          <li>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur
-          </li>
+          <li>State management</li>
+          <li>Client-side routing</li>
+          <li>Forms and input validation</li>
+          <li>Working with REST APIs</li>
+          <li>Implementing designs from high-fidelity prototypes</li>
         </ul>
-        <p>Excepteur sint occaecat cupidatat non proident.</p>
+        <p>
+          User experience played an important role in driving the design
+          decisions of this project. Features such as turn indicators and valid
+          move highlights were added to make gameplay more intuitive than the
+          physical board game - helping users easily keep track of the game
+          state. Some accessibility concerns like responsive layouts and screen
+          reader support were also implemented, according to the Web Content
+          Accessibility Guidelines (WCAG).
+        </p>
       </>
     ),
   },

@@ -99,7 +99,9 @@ export default function Projects() {
                           <Badge key={tag} label={tag}></Badge>
                         ))}
                       </div>
-                      <div className="text-ellipsis">{project.subtitle}</div>
+                      <div className="text-ellipsis text-sm">
+                        {project.subtitle}
+                      </div>
                     </div>
                     <Link
                       className=" self-center"
