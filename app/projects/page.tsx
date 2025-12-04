@@ -43,8 +43,7 @@ export default function Projects() {
       <div className="flex flex-col pb-8 items-center">
         <h1 className="pb-4 text-2xl font-semibold text-accent">Projects</h1>
         <h3 className="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+          A collection of my personal and universtiy projects
         </h3>
       </div>
       <Carousel
