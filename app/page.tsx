@@ -33,18 +33,6 @@ const workExperience: HistoryItem[] = [
     skills: [Language.PHP, Language.BASH, "Automation"],
     role: "Operations Support Systems Intern",
   },
-  {
-    type: "work",
-    startDate: new Date(2021, 3),
-    endDate: new Date(2022, 1),
-    company: "Raja Eleena Siew Ang & Associates",
-    description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
-    ],
-    role: "Clerk",
-  },
 ];
 
 const education: HistoryItem[] = [

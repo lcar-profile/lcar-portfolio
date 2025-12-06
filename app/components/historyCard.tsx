@@ -72,7 +72,7 @@ export default function HistoryCard({
                   <div>{role}</div>
                 </div>
                 <div className="flex flex-row gap-2 items-center">
-                  <Calendar size={20}></Calendar>
+                  <Calendar size={20} className="shrink-0"></Calendar>
                   <div className="flex flex-row">
                     <span>
                       {startDate.toLocaleDateString("en-US", {
