@@ -109,9 +109,13 @@ export default function HistoryCard({
         </div>
         <CollapsibleContent>
           <hr className={`border-t-1 my-4 w-full`} />
-          <ul>
+          <ul className="list-disc list-outside ml-4">
             {description.map((d) => {
-              return <li key={d}>&#x2022; {d}</li>;
+              return (
+                <li key={d} className="mt-2">
+                  {d}
+                </li>
+              );
             })}
           </ul>
         </CollapsibleContent>

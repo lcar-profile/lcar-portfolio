@@ -53,11 +53,12 @@ const education: HistoryItem[] = [
     startDate: new Date(2020, 9),
     endDate: new Date(2025, 10),
     company: "Monash University",
-    role: "Bachelor of Software Engineering",
+    role: "Bachelor of Software Engineering (First Class Honours)",
     description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
+      "GPA: 3.78/4.00 (CGPA: 3.93/4.00)",
+      "Dean's Honour List (2022-2023): Achieved weighted average of 80% and above",
+      "Monash High Achiever Award (2020-2025): Partial tuition fee waiver each semester based on academic performance",
+      "Industry-Based Learning Scholarship (2023): Partial tuition fee waiver for 22-week industry placement",
     ],
   },
   {
@@ -67,9 +68,8 @@ const education: HistoryItem[] = [
     company: "Taylor's College",
     role: "Cambridge A Levels",
     description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
+      "Grades: 4A*",
+      "Taylor's Distinction Award (2019): 100% tuition fee waiver",
     ],
   },
   {
@@ -78,11 +78,7 @@ const education: HistoryItem[] = [
     endDate: new Date(2018, 11),
     company: "SMK Bandar Utama Damansara 3",
     role: "Malaysian Education Certificate (SPM)",
-    description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
-    ],
+    description: ["Grades: 7A+, 1A, 1B+"],
   },
 ];
 
