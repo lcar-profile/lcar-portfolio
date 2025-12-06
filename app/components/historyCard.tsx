@@ -14,13 +14,13 @@ import {
 } from "lucide-react";
 import React from "react";
 import Image from "next/image";
-import { Framework, Language } from "../types/tags";
+import { Framework, HistoryType, Language } from "../types/tags";
 import Badge from "./badge";
 import IconButton from "./iconButton";
 import Card from "./card";
 
 export interface HistoryItem {
-  type: "work" | "education";
+  type: HistoryType;
   startDate: Date;
   endDate: Date;
   company: string;
@@ -63,7 +63,7 @@ export default function HistoryCard({
                 <div className="font-semibold text-lg">{company}</div>
                 <div className="flex flex-row gap-2 items-center">
                   <div className="shrink-0">
-                    {type == "work" ? (
+                    {type == HistoryType.WORK ? (
                       <User size={20} />
                     ) : (
                       <GraduationCap size={20} />

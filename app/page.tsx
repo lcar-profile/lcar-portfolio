@@ -2,11 +2,11 @@ import Link from "next/link";
 import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
 import Separator from "./components/separator";
-import { Framework, Language } from "./types/tags";
+import { Framework, HistoryType, Language } from "./types/tags";
 
 const workExperience: HistoryItem[] = [
   {
-    type: "work",
+    type: HistoryType.WORK,
     startDate: new Date(2024, 10),
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
@@ -20,7 +20,7 @@ const workExperience: HistoryItem[] = [
     role: "Web Development Intern",
   },
   {
-    type: "work",
+    type: HistoryType.WORK,
     startDate: new Date(2023, 6),
     endDate: new Date(2023, 11),
     company: "TIME",
@@ -37,7 +37,7 @@ const workExperience: HistoryItem[] = [
 
 const education: HistoryItem[] = [
   {
-    type: "education",
+    type: HistoryType.EDUCATION,
     startDate: new Date(2020, 9),
     endDate: new Date(2025, 10),
     company: "Monash University",
@@ -50,7 +50,7 @@ const education: HistoryItem[] = [
     ],
   },
   {
-    type: "education",
+    type: HistoryType.EDUCATION,
     startDate: new Date(2019, 0),
     endDate: new Date(2020, 5),
     company: "Taylor's College",
@@ -61,7 +61,7 @@ const education: HistoryItem[] = [
     ],
   },
   {
-    type: "education",
+    type: HistoryType.EDUCATION,
     startDate: new Date(2014, 0),
     endDate: new Date(2018, 11),
     company: "SMK Bandar Utama Damansara 3",

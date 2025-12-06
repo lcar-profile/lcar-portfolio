@@ -19,3 +19,8 @@ export enum Framework {
   FLUTTER = "Flutter",
   COMPOSE = "Jetpack Compose",
 }
+
+export enum HistoryType {
+  WORK = "work",
+  EDUCATION = "education",
+}
