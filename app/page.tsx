@@ -110,11 +110,6 @@ export default function Home() {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
           })}
         </div>
-        <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
-          <Button size="lg" variant="default">
-            View Resume
-          </Button>
-        </Link>
       </div>
       <Separator />
       <div className="flex flex-col items-center w-full">
@@ -124,15 +119,6 @@ export default function Home() {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
           })}
         </div>
-        <Link
-          href={"/transcript.pdf"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button size="lg" variant="default">
-            View Academic Transcript
-          </Button>
-        </Link>
       </div>
       <Separator></Separator>
     </div>
