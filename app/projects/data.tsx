@@ -106,7 +106,7 @@ export const allProjects: ProjectProps[] = [
           proof-of-concept e-wallet used for multi-lane free flow (MLFF) toll
           payments. As part of the front-end team, I designed a survey to
           identify weaknesses of existing e-wallet UIs, and used the feedback
-          from over 200 respondents to guide design of our prototype.
+          from over 200 respondents to guide the design of our prototype.
         </p>
         <p>
           I implemented a collection of custom and reusable widgets (e.g.,
@@ -187,29 +187,37 @@ export const allProjects: ProjectProps[] = [
     ),
   },
   {
-    title: "Pokemon Roguelike",
+    title: "Pokémon Roguelike",
     tags: [Language.JAVA],
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    subtitle: "A Pokémon-inspired game played on the terminal",
     image: "/images/pokemon_thumbnail.jpg",
     path: "/projects/pokemon-roguelike",
     github: "https://github.com/carsnl/RoguelikePokemon",
     body: (
       <>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          This project was part of an introductory university course on
+          object-oriented programming, where I developed a roguelike Pokémon
+          game in Java. I extended a given game engine and added new features to
+          the game, implementing key Pokémon game mechanics, such as world
+          exploration, game events, Pokémon encounters, interaction and
+          evolution.
         </p>
-        <ul className="list-disc pl-5">
-          <li>Ut enim ad minim veniam</li>
-          <li>quis nostrud exercitation ullamco laboris</li>
-          <li>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur
-          </li>
-        </ul>
-        <p>Excepteur sint occaecat cupidatat non proident.</p>
+        <p>
+          The project started with the design phase, creating Unified Modelling
+          Language (UML) class and sequence diagrams, then translating these
+          technical requirements to code.
+        </p>
+        <div>
+          <p>The design was later refined by:</p>
+          <ul className="list-disc pl-5">
+            <li>Identifying and addressing code smells</li>
+            <li>Applying the SOLID principles</li>
+            <li>
+              Incorporating design patterns such as Singleton and Observer
+            </li>
+          </ul>
+        </div>
       </>
     ),
   },
