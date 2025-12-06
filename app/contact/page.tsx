@@ -2,7 +2,7 @@
 
 import { ExternalLink, Copy, Check } from "lucide-react";
 import { IconContext, IconType } from "react-icons";
-import { FaLinkedin, FaGithub, FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -18,7 +18,6 @@ interface ContactItem {
 }
 
 const contactItems: ContactItem[] = [
-  { icon: FaPhoneAlt, title: "Phone", subtitle: "+60 16-212 5882" },
   {
     icon: IoMail,
     title: "Email",
