@@ -2,7 +2,7 @@ import Link from "next/link";
 import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
 import Separator from "./components/separator";
-import { Framework, HistoryType, Language } from "./types/tags";
+import { Framework, HistoryType, Language, Skill } from "./types/tags";
 
 const workExperience: HistoryItem[] = [
   {
@@ -16,7 +16,7 @@ const workExperience: HistoryItem[] = [
       "Ut enim ad minim veniam",
     ],
     image: "/images/netizen_experience_logo.png",
-    skills: [Language.TS, Framework.REACT, Framework.NEXT, Framework.TAILWIND],
+    skills: [Language.TS, Framework.REACT, Framework.NEXT, Skill.FRONTEND],
     role: "Web Development Intern",
   },
   {
@@ -30,7 +30,7 @@ const workExperience: HistoryItem[] = [
       "Ut enim ad minim veniam",
     ],
     image: "/images/time_dotcom_berhad_logo.jpg",
-    skills: [Language.PHP, Language.BASH, "Automation"],
+    skills: [Language.PHP, Language.BASH, Skill.SCRIPTING],
     role: "Operations Support Systems Intern",
   },
 ];

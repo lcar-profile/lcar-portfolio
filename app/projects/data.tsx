@@ -4,7 +4,7 @@ import { Framework, Language } from "../types/tags";
 export interface ProjectProps {
   title: string;
   subtitle: string;
-  tags: (Language | Framework | string)[];
+  tags: (Language | Framework | Skill)[];
   image?: string;
   path: string;
   github?: string;

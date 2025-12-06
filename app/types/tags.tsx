@@ -20,6 +20,11 @@ export enum Framework {
   COMPOSE = "Jetpack Compose",
 }
 
+export enum Skill {
+  SCRIPTING = "Scripting",
+  FRONTEND = "Front-end",
+}
+
 export enum HistoryType {
   WORK = "work",
   EDUCATION = "education",
