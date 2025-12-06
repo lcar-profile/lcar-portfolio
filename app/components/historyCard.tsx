@@ -62,11 +62,13 @@ export default function HistoryCard({
               <div className="flex flex-col">
                 <div className="font-semibold text-lg">{company}</div>
                 <div className="flex flex-row gap-2 items-center">
-                  {type == "work" ? (
-                    <User size={20} />
-                  ) : (
-                    <GraduationCap size={20} />
-                  )}
+                  <div className="shrink-0">
+                    {type == "work" ? (
+                      <User size={20} />
+                    ) : (
+                      <GraduationCap size={20} />
+                    )}
+                  </div>
                   <div>{role}</div>
                 </div>
                 <div className="flex flex-row gap-2 items-center">
