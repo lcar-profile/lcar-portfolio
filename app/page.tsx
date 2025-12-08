@@ -11,9 +11,10 @@ const workExperience: HistoryItem[] = [
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
     description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
+      "Enhanced an internal hiring dashboard in Next.js that processes job applications by implementing new features involving CRUD operations, such as application history and filtering, to improve application tracking.",
+      "Implemented UI according to Figma designs provided by the UI/UX team, ensuring accurate translation of designs and responsiveness across different screen sizes.",
+      "Adhered to Agile development practices by participating in daily stand-ups, sprint planning and reviews with the Project Manager and Product Owner; proposed changes to existing development practices to improve team efficiency.",
+      "Participated in code reviews to justify design choices, identify potential issues, and suggest improvements to maintain code quality.",
     ],
     image: "/images/netizen_experience_logo.png",
     skills: [Language.TS, Framework.REACT, Framework.NEXT, Skill.FRONTEND],
