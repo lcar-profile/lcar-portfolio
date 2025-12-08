@@ -25,9 +25,10 @@ const workExperience: HistoryItem[] = [
     endDate: new Date(2023, 11),
     company: "TIME",
     description: [
-      "Lorem ipsum dolor sit amet",
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Ut enim ad minim veniam",
+      "Developed object-oriented PHP scripts to log the daily network performance of 487 Linux single-board computers, and to issue alerts on performance degradation; improved reliability of the initial design by reducing false alerts; led a presentation to explain the design and operation of the new alert system to 2 other teams.",
+      "Developed a PHP script that processes up to 400GB of data to generate an HTML email summarising the daily network performance of customer routers; enabling the team to quickly identify service areas experiencing network issues.",
+      "Developed Bash scripts to automate the installation of network drivers on single-board computers, increasing download speeds from 1.4Gbps to 2.0Gbps to support speed tests for network performance monitoring; identified and fixed defects in existing Bash scripts.",
+      "Implemented an automated alert system using Telegram Bot API and Grafana to monitor the resource utilisation of 15 Linux virtual machines.",
     ],
     image: "/images/time_dotcom_berhad_logo.jpg",
     skills: [Language.PHP, Language.BASH, Skill.SCRIPTING],
@@ -44,9 +45,9 @@ const education: HistoryItem[] = [
     role: "Bachelor of Software Engineering (First Class Honours)",
     description: [
       "GPA: 3.78/4.00 (CGPA: 3.93/4.00)",
-      "Dean's Honour List (2022-2023): Achieved weighted average of 80% and above",
-      "Monash High Achiever Award (2020-2025): Partial tuition fee waiver each semester based on academic performance",
-      "Industry-Based Learning Scholarship (2023): Partial tuition fee waiver for 22-week industry placement",
+      "Dean's Honour List (2022-2023): Achieved weighted average mark of 80% and above",
+      "Monash High Achiever Award (2020-2025): Partial tuition fee waiver based on academic performance",
+      "Industry-Based Learning (2023): Partial tuition fee waiver for 22-week industry placement",
     ],
   },
   {
@@ -57,7 +58,7 @@ const education: HistoryItem[] = [
     role: "Cambridge A Levels",
     description: [
       "Grades: 4A*",
-      "Taylor's Distinction Award (2019): 100% tuition fee waiver",
+      "Taylor's Distinction Award (2019): Full tuition fee waiver",
     ],
   },
   {

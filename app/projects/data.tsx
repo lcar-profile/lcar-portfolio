@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Framework, Language } from "../types/tags";
+import { Framework, Language, Skill } from "../types/tags";
 
 export interface ProjectProps {
   title: string;
