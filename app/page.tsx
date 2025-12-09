@@ -11,7 +11,7 @@ const workExperience: HistoryItem[] = [
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
     description: [
-      "Enhanced an internal hiring dashboard in Next.js that processes job applications by implementing new features involving CRUD operations, such as application history and filtering, to improve application tracking.",
+      "Enhanced an internal hiring dashboard in Next.js that processes job applications by implementing new features involving CRUD operations, such as application history, to improve application tracking.",
       "Implemented UI according to Figma designs provided by the UI/UX team, ensuring accurate translation of designs and responsiveness across different screen sizes.",
       "Adhered to Agile development practices by participating in daily stand-ups, sprint planning and reviews with the Project Manager and Product Owner; proposed changes to existing development practices to improve team efficiency.",
       "Participated in code reviews to justify design choices, identify potential issues, and suggest improvements to maintain code quality.",
@@ -78,12 +78,21 @@ export default function Home() {
       <div className="flex flex-col items-center w-full">
         <h1 className="mb-1 mt-6 text-4xl font-bold text-accent">Lai Carson</h1>
         <p>Software Engineer</p>
-        <p className="my-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <div className="flex flex-col my-10 gap-6 text-center">
+          <p>
+            Inquisitive Software Engineering graduate with 9 months of
+            internship experience across web development and scripting. I have
+            contributed to industry projects ranging from e-wallet and hiring
+            dashboard UIs, to automated network monitoring systems. I have a
+            strong track record of being analytical, improving through feedback,
+            and collaborating effectively in cross-functional teams.
+          </p>
+          <p>
+            I am seeking an entry-level role where I can apply my front-end
+            skills while also expanding into back-end development.
+          </p>
+        </div>
+
         <Link href={"/contact"} className="my-2">
           <Button size="lg" variant="default">
             Contact Me
