@@ -1,6 +1,3 @@
-"use client";
-
-import { use } from "react";
 import { allProjects } from "../data";
 import { notFound } from "next/navigation";
 import Badge from "@/app/components/badge";
@@ -10,13 +7,22 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import Separator from "@/app/components/separator";
 import HoverLink from "@/app/components/hoverLink";
+import { ProjectParams } from "../params";
 
-export default function ProjectPage({
+export function generateStaticParams() {
+  return (Object.keys(ProjectParams) as Array<keyof typeof ProjectParams>).map(
+    (key) => {
+      return { slug: ProjectParams[key] };
+    }
+  );
+}
+
+export default async function ProjectPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = use(params);
+  const { slug } = await params;
   const project = allProjects.find((p) => p.path.endsWith(slug));
 
   if (!project) {
