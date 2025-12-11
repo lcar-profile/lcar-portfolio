@@ -52,7 +52,7 @@ export default function HistoryCard({
               {image && (
                 <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
                   <Image
-                    src={`${config.basePath}/${image}`}
+                    src={image}
                     width={60}
                     height={60}
                     alt={"logo"}

@@ -17,7 +17,6 @@ import { FaGithub } from "react-icons/fa";
 import { Globe } from "lucide-react";
 import Separator from "../components/separator";
 import { Button } from "@/components/ui/button";
-import config from "../../next.config";
 
 export default function Projects() {
   const [api, setApi] = useState<CarouselApi>();
@@ -64,11 +63,7 @@ export default function Projects() {
                   }`}
                 >
                   <Image
-                    src={
-                      project.image
-                        ? `${config.basePath}/${project.image}`
-                        : `${config.basePath}/images/background.png`
-                    }
+                    src={project.image ?? "/images/background.png"}
                     width={1920}
                     height={1920}
                     alt="Default background"
