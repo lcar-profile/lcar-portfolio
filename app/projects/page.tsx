@@ -65,8 +65,9 @@ export default function Projects() {
                 >
                   <Image
                     src={
-                      project.image ??
-                      `${config.basePath}/images/background.png`
+                      project.image
+                        ? `${config.basePath}/${project.image}`
+                        : `${config.basePath}/images/background.png`
                     }
                     width={1920}
                     height={1920}
