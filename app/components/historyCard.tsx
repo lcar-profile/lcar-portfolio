@@ -18,6 +18,7 @@ import { Framework, HistoryType, Language } from "../types/tags";
 import Badge from "./badge";
 import IconButton from "./iconButton";
 import Card from "./card";
+import config from "../../next.config";
 
 export interface HistoryItem {
   type: HistoryType;
@@ -51,11 +52,12 @@ export default function HistoryCard({
               {image && (
                 <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
                   <Image
-                    src={image}
+                    src={`${config.basePath}/${image}`}
                     width={60}
                     height={60}
                     alt={"logo"}
                     className="rounded-sm object-contain"
+                    unoptimized
                   ></Image>
                 </div>
               )}
