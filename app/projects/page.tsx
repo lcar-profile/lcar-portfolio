@@ -67,6 +67,7 @@ export default function Projects() {
                     width={1920}
                     height={1920}
                     alt="Default background"
+                    unoptimized
                   />
                   <div className="flex flex-col p-3 gap-2 justify-between h-full">
                     <div className="flex flex-col gap-2 mb-3">
