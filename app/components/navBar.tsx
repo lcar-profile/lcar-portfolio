@@ -38,14 +38,19 @@ export default function NavBar() {
               </IconButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
-              className="w-40 bg-background border-1 rounded-sm p-2"
+              className="w-40 bg-background border-1 rounded-sm"
               align="start"
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col divide-y">
                 {menuItems.map((m, i) => {
                   return (
-                    <DropdownMenuItem key={i}>
-                      <Link href={m.pathname}>{m.label}</Link>
+                    <DropdownMenuItem key={i} asChild className="p-3">
+                      <Link
+                        href={m.pathname}
+                        className="active:bg-foreground/10"
+                      >
+                        {m.label}
+                      </Link>
                     </DropdownMenuItem>
                   );
                 })}
