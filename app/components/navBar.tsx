@@ -74,7 +74,8 @@ export default function NavBar() {
                 <HoverLink
                   href={item.pathname}
                   className={`${
-                    isCurrentPath && "font-bold underline underline-offset-4"
+                    isCurrentPath &&
+                    "font-bold underline underline-offset-6 decoration-1"
                   } px-3 py-2 rounded-sm`}
                 >
                   {item.label}
