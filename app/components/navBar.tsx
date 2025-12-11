@@ -28,11 +28,8 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between items-center px-8 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg z-10 w-screen min-w-0">
-      <Link href="/" className="font-bold text-lg">
-        Lai Carson
-      </Link>
-      <div className="flex flex-row">
+    <div className="w-full flex flex-row justify-between items-center px-4 md:px-8 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg z-10 w-screen min-w-0">
+      <div className="flex flex-row gap-3 items-center">
         <div className="block md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -42,7 +39,7 @@ export default function NavBar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               className="w-40 bg-background border-1 rounded-sm p-2"
-              align="end"
+              align="start"
             >
               <div className="flex flex-col gap-2">
                 {menuItems.map((m, i) => {
@@ -56,7 +53,12 @@ export default function NavBar() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <ul className="flex flex-row gap-7 items-center hidden md:flex">
+        <Link href="/" className="font-bold text-lg">
+          Lai Carson
+        </Link>
+      </div>
+      <div className="flex flex-row">
+        <ul className="flex flex-row gap-7 mr-6 items-center hidden md:flex">
           {menuItems.map((item) => {
             const isCurrentPath =
               item.pathname === "/"
@@ -75,8 +77,8 @@ export default function NavBar() {
               </li>
             );
           })}
-          <ModeToggle></ModeToggle>
         </ul>
+        <ModeToggle></ModeToggle>
       </div>
     </div>
   );
