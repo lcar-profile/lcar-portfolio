@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Framework, Language, Skill } from "../types/tags";
+import { ProjectParams } from "./params";
 
 export interface ProjectProps {
   title: string;
@@ -18,7 +19,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.TS, Framework.REACT, Language.HTML, Language.CSS],
     subtitle: "A web-based implementation of the popular Reversi board game",
     image: "/images/reversi_thumbnail.jpg",
-    path: "/projects/reversi",
+    path: ProjectParams.REVERSI,
     github: "https://github.com/lcar-showcase/lcar-rg",
     live: "http://lcar-showcase.github.io/lcar-rg/",
     body: (
@@ -65,7 +66,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.JS, Language.HTML, Language.CSS, Framework.NODE],
     subtitle: "A web application that aggregates news articles",
     image: "/images/newsportal_thumbnail.jpg",
-    path: "/projects/newsportal",
+    path: ProjectParams.NEWSPORTAL,
     github: "https://github.com/carsnl/NewsPortal",
     body: (
       <>
@@ -97,7 +98,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.DART, Framework.FLUTTER],
     subtitle: "A cross-platform e-wallet mobile app for toll payments",
     image: "/images/ewallet_thumbnail.jpg",
-    path: "/projects/ewallet",
+    path: ProjectParams.EWALLET,
     body: (
       <>
         <p>
@@ -157,7 +158,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.KOTLIN, Framework.COMPOSE],
     subtitle: "An Android app for personalised dietary guidance",
     image: "/images/nutricoach_thumbnail.jpg",
-    path: "/projects/nutrition-assistant",
+    path: ProjectParams.NUTRITION,
     github: "https://github.com/carsnl/NutritionAssistant",
     body: (
       <>
@@ -191,7 +192,7 @@ export const allProjects: ProjectProps[] = [
     tags: [Language.JAVA],
     subtitle: "A Pokémon-inspired game played on the terminal",
     image: "/images/pokemon_thumbnail.jpg",
-    path: "/projects/pokemon-roguelike",
+    path: ProjectParams.POKEMON,
     github: "https://github.com/carsnl/RoguelikePokemon",
     body: (
       <>

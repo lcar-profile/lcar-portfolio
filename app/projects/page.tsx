@@ -104,7 +104,7 @@ export default function Projects() {
                     </div>
                     <Link
                       className=" self-center"
-                      href={project.path ?? ""}
+                      href={project.path ? `/project/${project.path}` : ""}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
