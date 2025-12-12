@@ -49,9 +49,7 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
 
   const CardContent = (
     <Card
-      className={
-        contacts.link && `hover:border-(--hyperlink) hover:bg-primary/10`
-      }
+      className={contacts.link && `hover:border-hyperlink hover:bg-primary/10`}
     >
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-3">

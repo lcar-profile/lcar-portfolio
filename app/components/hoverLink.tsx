@@ -14,7 +14,7 @@ export default function HoverLink({
   ...props
 }: HoverLinkProps) {
   return (
-    <Link {...props} className={cn("hover:text-(--hyperlink)", className)}>
+    <Link {...props} className={cn("hover:text-hyperlink", className)}>
       {children}
     </Link>
   );
