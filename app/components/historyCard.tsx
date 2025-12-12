@@ -116,7 +116,7 @@ export default function HistoryCard({
           <ul className="list-disc list-outside ml-4">
             {description.map((d) => {
               return (
-                <li key={d} className="mt-2">
+                <li key={d} className="mt-4">
                   {d}
                 </li>
               );

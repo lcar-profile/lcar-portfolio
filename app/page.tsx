@@ -104,7 +104,7 @@ export default function Home() {
         <h2 className="pb-6 text-2xl font-semibold text-accent">
           Work Experience
         </h2>
-        <div className="flex flex-col w-full gap-4 mb-8">
+        <div className="flex flex-col w-full gap-4">
           {workExperience.map((item) => {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
           })}
@@ -113,7 +113,7 @@ export default function Home() {
       <Separator />
       <div className="flex flex-col items-center w-full">
         <h2 className="pb-6 text-2xl font-semibold text-accent">Education</h2>
-        <div className="flex flex-col w-full gap-4 mb-8">
+        <div className="flex flex-col w-full gap-4">
           {education.map((item) => {
             return <HistoryCard key={item.company} {...item}></HistoryCard>;
           })}
