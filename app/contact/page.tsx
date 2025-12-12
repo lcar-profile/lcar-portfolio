@@ -49,7 +49,9 @@ function ContactCard({ contacts }: { contacts: ContactItem }) {
 
   const CardContent = (
     <Card
-      className={contacts.link && `hover:border-primary hover:text-primary`}
+      className={
+        contacts.link && `hover:border-(--hyperlink) hover:bg-primary/10`
+      }
     >
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-3">
@@ -112,7 +114,7 @@ export default function Contact() {
     <div className="flex flex-col w-full max-w-4xl mx-auto items-center">
       <div className="flex flex-col items-center w-full">
         <h2 className="pb-4 text-2xl font-semibold text-accent">Contact me</h2>
-        <h3 className="text-sm">Subtitle text here</h3>
+        <h3 className="text-sm">Reach me through the following channels</h3>
         <Separator />
         <div className="flex flex-col gap-4 w-full max-w-sm">
           {contactItems.map((c) => {

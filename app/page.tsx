@@ -92,7 +92,6 @@ export default function Home() {
             skills while also expanding into back-end development.
           </p>
         </div>
-
         <Link href={"/contact"} className="my-2">
           <Button size="lg" variant="default">
             Contact Me
