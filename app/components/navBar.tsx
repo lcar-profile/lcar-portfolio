@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "./toggle";
-import { Menu } from "lucide-react";
+import { Menu, House, Folder, Mail, LucideIcon } from "lucide-react";
 import IconButton from "./iconButton";
 import {
   DropdownMenu,
@@ -12,16 +12,18 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import HoverLink from "./hoverLink";
+import { useState } from "react";
 
 interface MenuItem {
   label: string;
   pathname: string;
+  icon: LucideIcon;
 }
 
 const menuItems: MenuItem[] = [
-  { label: "Home", pathname: "/" },
-  { label: "Projects", pathname: "/projects" },
-  { label: "Contact", pathname: "/contact" },
+  { label: "Home", pathname: "/", icon: House },
+  { label: "Projects", pathname: "/projects", icon: Folder },
+  { label: "Contact", pathname: "/contact", icon: Mail },
 ];
 
 export default function NavBar() {
@@ -40,6 +42,9 @@ export default function NavBar() {
             <DropdownMenuContent
               className="w-40 bg-background border-1 rounded-sm"
               align="start"
+              side="bottom"
+              sideOffset={10}
+              avoidCollisions
             >
               <div className="flex flex-col divide-y">
                 {menuItems.map((m, i) => {
@@ -47,8 +52,9 @@ export default function NavBar() {
                     <DropdownMenuItem key={i} asChild className="p-3">
                       <Link
                         href={m.pathname}
-                        className="active:bg-foreground/10"
+                        className="flex gap-2 items-center active:bg-foreground/10"
                       >
+                        <m.icon size={20} />
                         {m.label}
                       </Link>
                     </DropdownMenuItem>
@@ -64,21 +70,20 @@ export default function NavBar() {
       </div>
       <div className="flex flex-row">
         <ul className="flex flex-row gap-7 mr-6 items-center hidden md:flex">
-          {menuItems.map((item) => {
+          {menuItems.map((m) => {
             const isCurrentPath =
-              item.pathname === "/"
-                ? path === "/"
-                : path.startsWith(item.pathname);
+              m.pathname === "/" ? path === "/" : path.startsWith(m.pathname);
             return (
-              <li key={item.pathname}>
+              <li key={m.pathname}>
                 <HoverLink
-                  href={item.pathname}
+                  href={m.pathname}
                   className={`${
                     isCurrentPath &&
-                    "font-bold underline underline-offset-6 decoration-1"
-                  } px-3 py-2 rounded-sm`}
+                    "font-bold border-b-[1.5px] border-foreground"
+                  } flex items-center gap-2 p-1`}
                 >
-                  {item.label}
+                  <m.icon size={20} />
+                  {m.label}
                 </HoverLink>
               </li>
             );
