@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./components/navBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "./components/footer";
 
 const lekton = Lekton({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
           </div>
           <Toaster></Toaster>
         </ThemeProvider>
+        <Footer></Footer>
       </body>
     </html>
   );
