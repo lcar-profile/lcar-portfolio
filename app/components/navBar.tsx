@@ -78,7 +78,7 @@ export default function NavBar() {
                   href={m.pathname}
                   className={`${
                     isCurrentPath &&
-                    "font-bold border-b-[1.5px] border-foreground"
+                    "font-bold border-b-[1.5px] border-foreground hover:border-(--hyperlink)"
                   } flex items-center gap-2 p-1`}
                 >
                   <m.icon size={16} />
