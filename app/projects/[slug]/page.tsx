@@ -51,7 +51,7 @@ export default async function ProjectPage({
               {github && (
                 <Button
                   className="flex flex-row gap-1.5"
-                  variant={"default"}
+                  variant="default"
                   asChild
                 >
                   <Link href={github} target="_blank" rel="noopener noreferrer">
@@ -64,7 +64,7 @@ export default async function ProjectPage({
               {live && (
                 <Button
                   className="flex flex-row gap-1.5"
-                  variant="outline"
+                  variant="secondary"
                   asChild
                 >
                   <Link href={live} target="_blank" rel="noopener noreferrer">

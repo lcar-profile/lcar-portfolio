@@ -12,7 +12,6 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import HoverLink from "./hoverLink";
-import { useState } from "react";
 
 interface MenuItem {
   label: string;
@@ -82,7 +81,7 @@ export default function NavBar() {
                     "font-bold border-b-[1.5px] border-foreground"
                   } flex items-center gap-2 p-1`}
                 >
-                  <m.icon size={20} />
+                  <m.icon size={16} />
                   {m.label}
                 </HoverLink>
               </li>
