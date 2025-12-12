@@ -42,11 +42,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar></NavBar>
-          <div className="flex px-5 md:px-10 py-6 mt-16 justify-center">
-            {children}
+          <div className="flex flex-col h-screen w-screen">
+            <NavBar></NavBar>
+            <main className="flex flex-grow px-5 md:px-10 py-6 mt-16 justify-center overflow-auto">
+              {children}
+            </main>
+            <Toaster></Toaster>
           </div>
-          <Toaster></Toaster>
         </ThemeProvider>
         <Footer></Footer>
       </body>
