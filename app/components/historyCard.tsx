@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 import {
   ChevronUp,
   ChevronDown,
@@ -16,9 +12,7 @@ import React from "react";
 import Image from "next/image";
 import { Framework, HistoryType, Language } from "../types/tags";
 import Badge from "./badge";
-import IconButton from "./iconButton";
 import Card from "./card";
-import config from "../../next.config";
 
 export interface HistoryItem {
   type: HistoryType;
@@ -44,11 +38,16 @@ export default function HistoryCard({
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Card>
-      <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
+    <Card className="shadow-xs hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
+      <Collapsible
+        open={isOpen}
+        onOpenChange={setIsOpen}
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full"
+      >
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-2 items-center text-sm">
               {image && (
                 <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
                   <Image
@@ -63,32 +62,34 @@ export default function HistoryCard({
               )}
               <div className="flex flex-col">
                 <div className="font-semibold text-lg">{company}</div>
-                <div className="flex flex-row gap-2 items-center">
-                  <div className="shrink-0">
-                    {type == HistoryType.WORK ? (
-                      <User size={20} />
-                    ) : (
-                      <GraduationCap size={20} />
-                    )}
+                <div className="flex flex-col gap-1">
+                  <div className="flex flex-row gap-2 items-center text-muted-foreground text-sm">
+                    <div className="shrink-0">
+                      {type == HistoryType.WORK ? (
+                        <User size={18} />
+                      ) : (
+                        <GraduationCap size={18} />
+                      )}
+                    </div>
+                    <div>{role}</div>
                   </div>
-                  <div>{role}</div>
-                </div>
-                <div className="flex flex-row gap-2 items-center">
-                  <Calendar size={20} className="shrink-0"></Calendar>
-                  <div className="flex flex-row">
-                    <span>
-                      {startDate.toLocaleDateString("en-US", {
-                        month: "short",
-                        year: "numeric",
-                      })}
-                    </span>
-                    <span className="px-2">-</span>
-                    <span>
-                      {endDate.toLocaleDateString("en-US", {
-                        month: "short",
-                        year: "numeric",
-                      })}
-                    </span>
+                  <div className="flex flex-row gap-2 items-center text-muted-foreground">
+                    <Calendar size={18} className="shrink-0"></Calendar>
+                    <div className="flex flex-row">
+                      <span>
+                        {startDate.toLocaleDateString("en-US", {
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </span>
+                      <span className="px-2">-</span>
+                      <span>
+                        {endDate.toLocaleDateString("en-US", {
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -101,15 +102,13 @@ export default function HistoryCard({
               </div>
             )}
           </div>
-          <CollapsibleTrigger asChild>
-            <IconButton screenReader="toggle" size={5}>
-              {isOpen ? (
-                <ChevronUp className="!size-5"></ChevronUp>
-              ) : (
-                <ChevronDown className="!size-5"></ChevronDown>
-              )}
-            </IconButton>
-          </CollapsibleTrigger>
+          <div className="flex-0">
+            {isOpen ? (
+              <ChevronUp size={20}></ChevronUp>
+            ) : (
+              <ChevronDown size={20}></ChevronDown>
+            )}
+          </div>
         </div>
         <CollapsibleContent>
           <hr className={`border-t-1 my-4 w-full`} />
