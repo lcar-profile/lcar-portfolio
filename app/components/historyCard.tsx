@@ -38,7 +38,7 @@ export default function HistoryCard({
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Card className="shadow-xs hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
+    <Card className="hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
       <Collapsible
         open={isOpen}
         onOpenChange={setIsOpen}

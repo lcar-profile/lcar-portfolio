@@ -17,6 +17,7 @@ import { FaGithub } from "react-icons/fa";
 import { Globe } from "lucide-react";
 import Separator from "../components/separator";
 import { Button } from "@/components/ui/button";
+import Card from "../components/card";
 
 export default function Projects() {
   const [api, setApi] = useState<CarouselApi>();
@@ -57,8 +58,8 @@ export default function Projects() {
           {projects.map((project, id) => {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
-                <div
-                  className={`flex flex-col h-full bg-transparent border-1 rounded-sm overflow-hidden shadow-sm ${
+                <Card
+                  className={`flex flex-col p-0 h-full overflow-hidden ${
                     id === current - 1 && "border-primary border-2"
                   }`}
                 >
@@ -112,7 +113,7 @@ export default function Projects() {
                       <Button>View Project</Button>
                     </Link>
                   </div>
-                </div>
+                </Card>
               </CarouselItem>
             );
           })}
