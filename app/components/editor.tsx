@@ -75,7 +75,7 @@ export default function Editor({ text }: EditorProps) {
             ? "hidden"
             : `flex overflow-hidden ${isOpen ? "min-h-[356px]" : "min-h-fit"} ${
                 isFullscreen
-                  ? "z-50 fixed top-0 left-0 w-screen h-screen rounded-none"
+                  ? "z-50 fixed top-0 left-0 w-screen h-dvh rounded-none"
                   : "z-0 w-full h-fit rounded-md"
               }`
         }`}
