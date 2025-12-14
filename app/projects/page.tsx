@@ -58,7 +58,7 @@ export default function Projects() {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
                 <div
-                  className={`flex flex-col h-full bg-background border-1 rounded-sm overflow-hidden ${
+                  className={`flex flex-col h-full bg-transparent border-1 rounded-sm overflow-hidden ${
                     id === current - 1 && "border-primary border-2"
                   }`}
                 >
