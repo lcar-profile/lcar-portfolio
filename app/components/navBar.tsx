@@ -29,7 +29,7 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <div className="w-full flex flex-row justify-between items-center px-4 md:px-8 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/80 backdrop-blur-lg z-10 w-screen min-w-0">
+    <div className="w-full flex flex-row justify-between items-center px-4 md:px-8 h-16 fixed top-0 right-0 left-0 border-b-[1px] bg-background/10 backdrop-blur-lg z-10 w-screen min-w-0">
       <div className="flex flex-row gap-3 items-center">
         <div className="block md:hidden">
           <DropdownMenu>
