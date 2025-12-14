@@ -75,7 +75,7 @@ export default function Editor({ text }: EditorProps) {
             ? "hidden"
             : `flex overflow-hidden ${isOpen ? "min-h-[356px]" : "min-h-fit"} ${
                 isFullscreen
-                  ? "z-50 fixed top-0 left-0 w-screen h-dvh rounded-none"
+                  ? "z-50 fixed inset-0 w-screen h-full rounded-none"
                   : "z-0 w-full h-fit rounded-md"
               }`
         }`}
@@ -121,7 +121,6 @@ export default function Editor({ text }: EditorProps) {
               onChange={(e) => setTextField(e.target.value)}
               className="bg-transparent w-full h-full resize-none text-left outline-none text-sm font-google-sans-code"
               spellCheck={false}
-              autoFocus
             />
             <div className="flex flex-row items-center justify-end">
               <EditorButton

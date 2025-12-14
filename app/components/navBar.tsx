@@ -67,19 +67,19 @@ export default function NavBar() {
           Lai Carson
         </Link>
       </div>
-      <div className="flex flex-row">
-        <ul className="flex flex-row gap-7 mr-6 items-center hidden md:flex">
+      <div className="flex flex-row h-full items-center">
+        <ul className="flex flex-row h-full items-center mr-6 items-center hidden md:flex">
           {menuItems.map((m) => {
             const isCurrentPath =
               m.pathname === "/" ? path === "/" : path.startsWith(m.pathname);
             return (
-              <li key={m.pathname}>
+              <li key={m.pathname} className="flex items-center h-full px-3">
                 <HoverLink
                   href={m.pathname}
                   className={`${
                     isCurrentPath &&
-                    "font-bold border-b-[1.5px] border-foreground hover:border-hyperlink"
-                  } flex items-center gap-2 p-1`}
+                    "font-bold border-b-[2px] border-foreground hover:border-hyperlink"
+                  } flex h-full items-center gap-2 p-1`}
                 >
                   <m.icon size={16} />
                   {m.label}
