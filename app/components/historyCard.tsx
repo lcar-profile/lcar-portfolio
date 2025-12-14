@@ -110,7 +110,11 @@ export default function HistoryCard({
             )}
           </div>
         </div>
-        <CollapsibleContent>
+        <CollapsibleContent
+          className={
+            "data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]"
+          }
+        >
           <hr className={`border-t-1 my-4 w-full`} />
           <ul className="list-disc list-outside ml-4">
             {description.map((d) => {
