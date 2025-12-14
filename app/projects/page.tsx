@@ -53,12 +53,12 @@ export default function Projects() {
           loop: true,
         }}
       >
-        <CarouselContent>
+        <CarouselContent className="p-1">
           {projects.map((project, id) => {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
                 <div
-                  className={`flex flex-col h-full bg-transparent border-1 rounded-sm overflow-hidden ${
+                  className={`flex flex-col h-full bg-transparent border-1 rounded-sm overflow-hidden shadow-sm ${
                     id === current - 1 && "border-primary border-2"
                   }`}
                 >
@@ -126,7 +126,9 @@ export default function Projects() {
             <div
               key={id}
               className={`w-4 h-4 rounded-xl ${
-                id === current - 1 ? "bg-accent" : "bg-muted-foreground"
+                id === current - 1
+                  ? "bg-muted-foreground/70"
+                  : "bg-muted-foreground/20"
               }`}
             ></div>
           );
