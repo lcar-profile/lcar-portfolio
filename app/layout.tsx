@@ -10,6 +10,7 @@ import NavBar from "./components/navBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./components/footer";
+import Background from "./components/background";
 
 const lekton = Lekton({
   subsets: ["latin"],
@@ -50,14 +51,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="h-screen flex flex-col">
-            <NavBar></NavBar>
-            <main className="flex flex-1 px-5 md:px-10 py-6 mt-16 justify-center">
-              {children}
-            </main>
-            <Toaster></Toaster>
-            <Footer></Footer>
-          </div>
+          <Background>
+            <div className="min-h-screen flex flex-col">
+              <NavBar></NavBar>
+              <main className="flex flex-1 px-5 md:px-10 py-6 mt-16 justify-center">
+                {children}
+              </main>
+              <Toaster></Toaster>
+              <Footer></Footer>
+            </div>
+          </Background>
         </ThemeProvider>
       </body>
     </html>
