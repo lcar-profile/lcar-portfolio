@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Lekton,
-  Space_Mono,
-  Google_Sans_Code,
-  Manrope,
-} from "next/font/google";
+import { Google_Sans_Code, Manrope } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/navBar";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -12,19 +7,16 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "./components/footer";
 import Background from "./components/background";
 
-const lekton = Lekton({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
 const googleSansCode = Google_Sans_Code({
   subsets: ["latin"],
   variable: "--font-google-sans-code",
+  fallback: ["Arial", "Times New Roman"],
 });
 
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
+  fallback: ["Arial", "Times New Roman"],
 });
 
 export const metadata: Metadata = {
