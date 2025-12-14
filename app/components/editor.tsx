@@ -32,7 +32,7 @@ function WindowButton({
   return (
     <Button
       className={cn(
-        "bg-transparent text-background dark:text-foreground rounded-none hover:bg-slate-500 hover:dark:bg-neutral-900",
+        "bg-transparent text-foreground rounded-none hover:bg-slate-400 hover:dark:bg-neutral-900",
         className
       )}
       {...props}
@@ -81,7 +81,7 @@ export default function Editor({ text }: EditorProps) {
         }`}
       >
         <div className="flex flex-col flex-grow">
-          <div className="flex flex-row bg-slate-400 dark:bg-neutral-800 h-[36px] bg-muted items-center justify-between overflow-hidden text-background dark:text-foreground">
+          <div className="flex flex-row bg-slate-300 dark:bg-neutral-800 h-[36px] bg-muted items-center justify-between overflow-hidden text-foreground">
             <div className="flex flex-row gap-1 ml-4 items-center">
               <FileText size={16} />
               <div className="text-sm">welcome.txt</div>
@@ -112,7 +112,7 @@ export default function Editor({ text }: EditorProps) {
             </div>
           </div>
           <div
-            className={`flex flex-col gap-4 bg-slate-300 dark:bg-neutral-700 overflow-auto ${
+            className={`flex flex-col gap-4 bg-slate-200 dark:bg-neutral-700 overflow-auto ${
               isOpen ? "p-4 flex-1" : "p-0 h-0"
             }`}
           >
