@@ -61,7 +61,7 @@ export default function HistoryCard({
                 </div>
               )}
               <div className="flex flex-col">
-                <div className="font-semibold text-lg">{company}</div>
+                <div className="font-semibold text-lg mb-1">{company}</div>
                 <div className="flex flex-col gap-1">
                   <div className="flex flex-row gap-2 items-center text-muted-foreground text-sm">
                     <div className="shrink-0">

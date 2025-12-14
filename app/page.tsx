@@ -3,6 +3,7 @@ import HistoryCard, { HistoryItem } from "./components/historyCard";
 import { Button } from "@/components/ui/button";
 import Separator from "./components/separator";
 import { Framework, HistoryType, Language, Skill } from "./types/tags";
+import Editor from "./components/editor";
 
 const workExperience: HistoryItem[] = [
   {
@@ -72,31 +73,18 @@ const education: HistoryItem[] = [
   },
 ];
 
+const editorText =
+  "Inquisitive Software Engineering graduate with 9 months of internship experience across web development and scripting. I have contributed to industry projects ranging from e-wallet and hiring dashboard UIs, to automated network monitoring systems. I have a strong track record of being analytical, improving through feedback, and collaborating effectively in cross-functional teams.\n\nI am seeking an entry-level role where I can apply my front-end skills while also expanding into back-end development.";
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full max-w-4xl items-center">
       <div className="flex flex-col items-center w-full">
-        <h1 className="mb-1 mt-6 text-4xl font-bold text-accent">Lai Carson</h1>
-        <p>Software Engineer</p>
-        <div className="flex flex-col my-10 gap-6 text-center">
-          <p>
-            Inquisitive Software Engineering graduate with 9 months of
-            internship experience across web development and scripting. I have
-            contributed to industry projects ranging from e-wallet and hiring
-            dashboard UIs, to automated network monitoring systems. I have a
-            strong track record of being analytical, improving through feedback,
-            and collaborating effectively in cross-functional teams.
-          </p>
-          <p>
-            I am seeking an entry-level role where I can apply my front-end
-            skills while also expanding into back-end development.
-          </p>
+        <h1 className="mb-1 mt-6 text-5xl font-bold text-accent">Lai Carson</h1>
+        <p className="text-muted-foreground text-xl">Software Engineer</p>
+        <div className="flex flex-col w-full mt-10 gap-6 text-center">
+          <Editor text={editorText}></Editor>
         </div>
-        <Link href={"/contact"} className="my-2">
-          <Button size="lg" variant="default">
-            Contact Me
-          </Button>
-        </Link>
       </div>
       <Separator />
       <div className="flex flex-col items-center w-full">
