@@ -38,12 +38,12 @@ export default function HistoryCard({
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Card className="hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
+    <Card className="p-0 hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
       <Collapsible
         open={isOpen}
         onOpenChange={setIsOpen}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full"
+        className="w-full p-4"
       >
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
