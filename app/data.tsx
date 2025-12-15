@@ -32,6 +32,7 @@ export const workExperience: HistoryItem[] = [
     role: "Operations Support Systems Intern",
   },
 ];
+
 export const education: HistoryItem[] = [
   {
     type: HistoryType.EDUCATION,
@@ -66,5 +67,6 @@ export const education: HistoryItem[] = [
     description: ["Grades: 7A+, 1A, 1B+"],
   },
 ];
+
 export const editorText =
-  "Inquisitive Software Engineering graduate with 9 months of internship experience across web development and scripting. I have contributed to industry projects ranging from e-wallet and hiring dashboard UIs, to automated network monitoring systems. I have a strong track record of being analytical, improving through feedback, and collaborating effectively in cross-functional teams.\n\nI am seeking an entry-level role where I can apply my front-end skills while also expanding into back-end development.";
+  "Fresh graduate with past development experience in industry projects involving web, mobile and scripting.\n\nSeeking an entry-level role to strengthen existing skills and continue learning.\n\n:)";
