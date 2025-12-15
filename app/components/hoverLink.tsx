@@ -1,12 +1,8 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
-
-interface HoverLinkProps extends LinkProps {
-  className?: string;
-  children: React.ReactNode;
-}
+import { HoverLinkProps } from "../types";
 
 export default function HoverLink({
   className,

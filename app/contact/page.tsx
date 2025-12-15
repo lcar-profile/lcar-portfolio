@@ -1,7 +1,7 @@
 "use client";
 
 import { ExternalLink, Copy, Check } from "lucide-react";
-import { IconContext, IconType } from "react-icons";
+import { IconContext } from "react-icons";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { toast } from "sonner";
@@ -9,13 +9,7 @@ import { useState } from "react";
 import Separator from "../components/separator";
 import IconButton from "../components/iconButton";
 import Card from "../components/card";
-
-interface ContactItem {
-  icon: IconType;
-  title: string;
-  subtitle: string;
-  link?: string;
-}
+import { ContactItem } from "../types";
 
 const contactItems: ContactItem[] = [
   {

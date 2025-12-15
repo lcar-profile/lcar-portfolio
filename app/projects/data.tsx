@@ -1,17 +1,5 @@
-import { ReactNode } from "react";
-import { Framework, Language, Skill } from "../types/tags";
+import { ProjectProps, Framework, Language } from "../types";
 import { ProjectParams } from "./params";
-
-export interface ProjectProps {
-  title: string;
-  subtitle: string;
-  tags: (Language | Framework | Skill)[];
-  image?: string;
-  path: string;
-  github?: string;
-  live?: string;
-  body: ReactNode;
-}
 
 export const allProjects: ProjectProps[] = [
   {

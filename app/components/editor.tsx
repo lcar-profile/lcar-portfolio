@@ -12,18 +12,9 @@ import {
   X,
   RotateCcw,
   Trash2,
-  LucideIcon,
 } from "lucide-react";
 import { useState } from "react";
-
-interface EditorProps {
-  text?: string;
-}
-
-interface EditorButtonProps {
-  title: string;
-  Icon: LucideIcon;
-}
+import { EditorProps, EditorButtonProps } from "../types";
 
 function WindowButton({
   Icon,

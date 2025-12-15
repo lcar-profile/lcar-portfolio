@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "./toggle";
-import { Menu, House, Folder, Mail, LucideIcon } from "lucide-react";
+import { Menu, House, Folder, Mail } from "lucide-react";
 import IconButton from "./iconButton";
 import {
   DropdownMenu,
@@ -12,12 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import HoverLink from "./hoverLink";
-
-interface MenuItem {
-  label: string;
-  pathname: string;
-  icon: LucideIcon;
-}
+import { MenuItem } from "../types";
 
 const menuItems: MenuItem[] = [
   { label: "Home", pathname: "/", icon: House },

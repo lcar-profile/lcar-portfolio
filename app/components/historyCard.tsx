@@ -10,20 +10,9 @@ import {
 } from "lucide-react";
 import React from "react";
 import Image from "next/image";
-import { Framework, HistoryType, Language } from "../types/tags";
+import { HistoryItem, HistoryType } from "../types";
 import Badge from "./badge";
 import Card from "./card";
-
-export interface HistoryItem {
-  type: HistoryType;
-  startDate: Date;
-  endDate: Date;
-  company: string;
-  role: string;
-  image?: string;
-  skills?: (Framework | Language | string)[];
-  description: string[];
-}
 
 export default function HistoryCard({
   type,

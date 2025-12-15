@@ -1,8 +1,7 @@
-import Link from "next/link";
-import HistoryCard, { HistoryItem } from "./components/historyCard";
-import { Button } from "@/components/ui/button";
+import HistoryCard from "./components/historyCard";
+import { HistoryItem } from "./types";
 import Separator from "./components/separator";
-import { Framework, HistoryType, Language, Skill } from "./types/tags";
+import { HistoryType, Skill, Framework, Language } from "./types";
 import Editor from "./components/editor";
 
 const workExperience: HistoryItem[] = [
