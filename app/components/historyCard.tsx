@@ -47,7 +47,7 @@ export default function HistoryCard({
       >
         <div className="flex flex-row w-full justify-between items-center">
           <div className="flex flex-col">
-            <div className="flex flex-row gap-2 items-center text-sm">
+            <div className="flex flex-row gap-2 items-center text-sm md:text-base">
               {image && (
                 <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
                   <Image
@@ -63,7 +63,7 @@ export default function HistoryCard({
               <div className="flex flex-col">
                 <div className="font-semibold text-lg mb-1">{company}</div>
                 <div className="flex flex-col gap-1">
-                  <div className="flex flex-row gap-2 items-center text-muted-foreground text-sm">
+                  <div className="flex flex-row gap-2 items-center text-muted-foreground">
                     <div className="shrink-0">
                       {type == HistoryType.WORK ? (
                         <User size={18} />

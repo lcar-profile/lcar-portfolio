@@ -47,11 +47,17 @@ export default function NavBar() {
             >
               <div className="flex flex-col divide-y">
                 {menuItems.map((m, i) => {
+                  const isCurrentPath =
+                    m.pathname === "/"
+                      ? path === "/"
+                      : path.startsWith(m.pathname);
                   return (
                     <DropdownMenuItem key={i} asChild className="p-3">
                       <Link
                         href={m.pathname}
-                        className="flex gap-2 items-center active:bg-foreground/10"
+                        className={`${
+                          isCurrentPath && `text-hyperlink`
+                        } flex gap-2 items-center active:bg-foreground/10`}
                       >
                         <m.icon size={20} />
                         {m.label}
