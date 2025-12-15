@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col w-full max-w-4xl items-center">
       <div className="flex flex-col items-center w-full">
         <h1 className="mb-1 mt-6 text-5xl font-bold text-accent">Lai Carson</h1>
-        <p className="text-muted-foreground text-xl">Software Engineer</p>
+        <p className="text-xl">Software Engineer</p>
         <div className="flex flex-col w-full mt-10 gap-6 text-center">
           <Editor text={editorText}></Editor>
         </div>
