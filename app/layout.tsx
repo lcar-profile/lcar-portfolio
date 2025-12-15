@@ -43,16 +43,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Background>
-            <div className="min-h-dvh flex flex-col">
-              <NavBar></NavBar>
-              <main className="flex flex-1 px-5 md:px-10 py-6 mt-16 justify-center">
-                {children}
-              </main>
-              <Toaster></Toaster>
-              <Footer></Footer>
-            </div>
-          </Background>
+          <Background />
+          <div className="min-h-dvh flex flex-col w-full absolute">
+            <NavBar></NavBar>
+            <main className="flex flex-1 px-5 md:px-10 py-6 mt-16 justify-center">
+              {children}
+            </main>
+            <Toaster></Toaster>
+            <Footer></Footer>
+          </div>
+          {/* </Background> */}
         </ThemeProvider>
       </body>
     </html>
