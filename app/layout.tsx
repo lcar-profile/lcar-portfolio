@@ -44,7 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Background>
-            <div className="min-h-screen flex flex-col">
+            <div className="min-h-dvh flex flex-col">
               <NavBar></NavBar>
               <main className="flex flex-1 px-5 md:px-10 py-6 mt-16 justify-center">
                 {children}
