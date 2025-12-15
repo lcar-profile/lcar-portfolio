@@ -139,12 +139,6 @@
   }
 }
 
-html,
-body {
-  height: 100vh;
-  height: 100dvh;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
