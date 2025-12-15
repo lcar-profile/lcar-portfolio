@@ -86,7 +86,7 @@ export default function Editor({ text }: EditorProps) {
           onOpenChange={setIsOpen}
           className="flex flex-col flex-grow"
         >
-          <div className="flex flex-row bg-slate-300 dark:bg-neutral-800 h-[36px] flex-shrink-0 bg-muted items-center justify-between overflow-hidden text-foreground">
+          <div className="flex flex-row bg-stone-400 dark:bg-neutral-800 h-[36px] flex-shrink-0 bg-muted items-center justify-between overflow-hidden text-foreground">
             <div className="flex flex-row gap-1 ml-4 items-center">
               <FileText size={16} />
               <div className="text-sm">welcome.txt</div>
@@ -117,7 +117,7 @@ export default function Editor({ text }: EditorProps) {
             </div>
           </div>
           <CollapsibleContent
-            className={`flex flex-col h-full p-4 gap-4 bg-slate-200 dark:bg-neutral-700 overflow-auto data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]`}
+            className={`flex flex-col h-full p-4 gap-4 bg-stone-300 dark:bg-neutral-700 overflow-auto data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]`}
           >
             <textarea
               value={textField}
