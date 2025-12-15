@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ModeToggle } from "./toggle";
+import { ModeToggle } from "./modeToggle";
 import { Menu, House, Folder, Mail } from "lucide-react";
 import IconButton from "./iconButton";
 import {
