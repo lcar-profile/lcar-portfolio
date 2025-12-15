@@ -12,9 +12,9 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import HoverLink from "./hoverLink";
-import { MenuItem } from "../types";
+import { NavBarItem } from "../types";
 
-const menuItems: MenuItem[] = [
+const navBarItems: NavBarItem[] = [
   { label: "Home", pathname: "/", icon: House },
   { label: "Projects", pathname: "/projects", icon: Folder },
   { label: "Contact", pathname: "/contact", icon: Mail },
@@ -41,7 +41,7 @@ export default function NavBar() {
               avoidCollisions
             >
               <div className="flex flex-col divide-y">
-                {menuItems.map((m, i) => {
+                {navBarItems.map((m, i) => {
                   const isCurrentPath =
                     m.pathname === "/"
                       ? path === "/"
@@ -70,7 +70,7 @@ export default function NavBar() {
       </div>
       <div className="flex flex-row h-full items-center">
         <ul className="flex flex-row h-full items-center mr-6 items-center hidden md:flex">
-          {menuItems.map((m) => {
+          {navBarItems.map((m) => {
             const isCurrentPath =
               m.pathname === "/" ? path === "/" : path.startsWith(m.pathname);
             return (

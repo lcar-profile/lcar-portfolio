@@ -64,7 +64,7 @@ export interface HoverLinkProps extends LinkProps {
   children: React.ReactNode;
 }
 
-export interface MenuItem {
+export interface NavBarItem {
   label: string;
   pathname: string;
   icon: LucideIcon;
@@ -87,3 +87,16 @@ export interface ProjectProps {
   live?: string;
   body: ReactNode;
 }
+export enum ProjectParams {
+  REVERSI = "reversi",
+  NEWSPORTAL = "newsportal",
+  EWALLET = "ewallet",
+  NUTRITION = "nutrition-assitant",
+  POKEMON = "pokemon-roguelike",
+}
+export type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
+  children: ReactNode;
+  size?: number;
+  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  screenReader: string;
+};

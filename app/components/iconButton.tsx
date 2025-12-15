@@ -1,14 +1,7 @@
 import { forwardRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ReactNode, ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
-
-type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
-  children: ReactNode;
-  size?: number;
-  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  screenReader: string;
-};
+import { IconButtonProps } from "../types";
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (

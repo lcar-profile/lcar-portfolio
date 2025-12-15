@@ -1,5 +1,4 @@
-import { ProjectProps, Framework, Language } from "../types";
-import { ProjectParams } from "./params";
+import { ProjectProps, Framework, Language, ProjectParams } from "../types";
 
 export const allProjects: ProjectProps[] = [
   {

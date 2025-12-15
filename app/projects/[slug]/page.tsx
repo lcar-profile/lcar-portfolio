@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import Separator from "@/app/components/separator";
 import HoverLink from "@/app/components/hoverLink";
-import { ProjectParams } from "../params";
+import { ProjectParams } from "@/app/types";
 
 export function generateStaticParams() {
   return (Object.keys(ProjectParams) as Array<keyof typeof ProjectParams>).map(
