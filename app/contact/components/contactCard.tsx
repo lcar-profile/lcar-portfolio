@@ -9,7 +9,7 @@ import { IconContext } from "react-icons";
 import { toast } from "sonner";
 
 export default function ContactCard({
-  icon,
+  Icon,
   title,
   subtitle,
   link,
@@ -25,15 +25,15 @@ export default function ContactCard({
   const content = (
     <div className="flex flex-row justify-between items-center">
       <div className="flex flex-row items-center gap-3">
-        <div className="bg-foreground/20 p-3 rounded-full">
-          <IconContext value={{ size: "22px" }}>{icon}</IconContext>
+        <div className="bg-foreground/20 p-2 rounded-full">
+          <IconContext value={{}}>{Icon}</IconContext>
         </div>
         <div className="flex flex-col">
           <div className="flex flex-row gap-1 items-center">
             <div className="font-semibold">{title}</div>
             {link && (
               <div>
-                <ExternalLink size={16}></ExternalLink>
+                <ExternalLink size={14}></ExternalLink>
               </div>
             )}
           </div>

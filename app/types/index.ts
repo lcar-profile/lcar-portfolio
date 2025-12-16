@@ -86,7 +86,7 @@ export interface NavBarItem {
 }
 
 export interface ContactItem {
-  icon: ReactNode;
+  Icon: ReactNode;
   title: string;
   subtitle: string;
   link?: string;
