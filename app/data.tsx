@@ -42,7 +42,7 @@ export const education: HistoryItem[] = [
     role: "Bachelor of Software Engineering (First Class Honours)",
     description: [
       "GPA: 3.78/4.00; CGPA: 3.93/4.00",
-      "Dean's Honour List (2022-2023): Achieved weighted average mark of 80% and above",
+      "Dean's Honours List (2022-2023): Achieved weighted average mark of 80% and above",
       "Monash High Achiever Award (2020-2025): Partial tuition fee waiver based on academic performance",
       "Industry-Based Learning (2023): Partial tuition fee waiver for 22-week industry placement",
     ],
