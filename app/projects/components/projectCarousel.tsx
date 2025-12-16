@@ -55,13 +55,17 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
                     id === current - 1 && `border-[1.5px] border-primary`
                   }`}
                 >
-                  <Image
-                    src={project.image ?? "/images/background.png"}
-                    width={1920}
-                    height={1920}
-                    alt="Default background"
-                    unoptimized
-                  />
+                  <div className="relative">
+                    <Image
+                      src={project.image ?? "/images/background.png"}
+                      width={1920}
+                      height={1920}
+                      alt="Default background"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-600/10 from-0% to-transparent to-5%" />
+                  </div>
+
                   <div className="flex flex-col p-3 gap-2 justify-between h-full">
                     <div className="flex flex-col gap-2 mb-3">
                       <div className="flex flex-row items-center gap-2">
