@@ -2,34 +2,13 @@
 
 import { ExternalLink, Copy, Check } from "lucide-react";
 import { IconContext } from "react-icons";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
 import { toast } from "sonner";
 import { useState } from "react";
 import Separator from "../components/separator";
 import IconButton from "../components/iconButton";
 import Card from "../components/card";
 import { ContactItem } from "../types";
-
-const contactItems: ContactItem[] = [
-  {
-    icon: IoMail,
-    title: "Email",
-    subtitle: "laicarson.swe@gmail.com",
-  },
-  {
-    icon: FaLinkedin,
-    title: "LinkedIn",
-    link: "http://linkedin.com/in/l-car",
-    subtitle: "linkedin.com/in/l-car",
-  },
-  {
-    icon: FaGithub,
-    title: "GitHub",
-    link: "http://github.com/carsnl",
-    subtitle: "github.com/carsnl",
-  },
-];
+import { contactItems } from "./data";
 
 function ContactCard({ contacts }: { contacts: ContactItem }) {
   const [isCopied, setIsCopied] = useState(false);
