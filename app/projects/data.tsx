@@ -12,17 +12,23 @@ export const allProjects: ProjectProps[] = [
     body: (
       <>
         <p>
-          This Reversi game features a single-player mode, where users play
-          against a computer opponent. It previously supported loading saved
-          games, but this feature is temporarily disabled.
+          This game features a single-player mode, where users play against a
+          computer opponent. It implements all game rules defined by the{" "}
+          <a
+            href="https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
+            className="text-hyperlink"
+          >
+            World Othello Federation
+          </a>
+          . It previously supported loading saved games, but this feature is
+          temporarily disabled.
         </p>
         <div>
           <p>
-            This project helped strengthen my foundational web development
-            skills, by incorporating important front-end development concepts,
+            This project incorporates important front-end development concepts,
             such as:
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 ml-2 mt-2">
             <li>State management</li>
             <li>Client-side routing</li>
             <li>Forms and input validation</li>
@@ -81,12 +87,13 @@ export const allProjects: ProjectProps[] = [
     body: (
       <>
         <p>
-          This was my final year university project, where I was part of a team
-          that collaborated with an industry client to develop a
-          proof-of-concept e-wallet used for multi-lane free flow (MLFF) toll
-          payments. As part of the front-end team, I designed a survey to
-          identify weaknesses of existing e-wallet UIs, and used the feedback
-          from over 200 respondents to guide the design of our prototype.
+          This prototype was developed as part of my final year university
+          project, where I worked in a team that collaborated with an industry
+          client to develop a proof-of-concept e-wallet used for multi-lane free
+          flow (MLFF) toll payments. As part of the front-end team, I designed a
+          survey to identify weaknesses of existing e-wallet UIs, and used the
+          feedback from over 200 respondents to guide the design of our
+          prototype.
         </p>
         <p>
           I implemented a collection of custom and reusable widgets (e.g.,
@@ -94,10 +101,10 @@ export const allProjects: ProjectProps[] = [
         </p>
         <div>
           <p>
-            I also contributed to the UI for several key pages, with
-            functionality fully integrated with the back-end:
+            I also contributed to the UI and back-end integration for several
+            key pages:
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 ml-2 mt-2">
             <li>
               The <b>home page</b> that displays wallet balance and provides
               quick access to other features.
@@ -138,7 +145,7 @@ export const allProjects: ProjectProps[] = [
         </p>
         <div>
           <p>This project incorporates:</p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 ml-2 mt-2">
             <li>The Model-View-ViewModel (MVVM) architecture</li>
             <li>
               The Room database for local storage, with an additional Repository
@@ -174,7 +181,7 @@ export const allProjects: ProjectProps[] = [
         </p>
         <div>
           <p>The design was later refined by:</p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 ml-2 mt-2">
             <li>Identifying and addressing code smells</li>
             <li>Applying the SOLID principles</li>
             <li>
