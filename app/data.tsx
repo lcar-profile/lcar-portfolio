@@ -13,7 +13,7 @@ export const workExperience: HistoryItem[] = [
       "Participated in code reviews to justify design choices, identify potential issues in code, and suggest improvements to maintain code quality.",
     ],
     image: "/images/netizen_experience_logo.png",
-    skills: [Language.TS, Framework.REACT, Framework.NEXT, Skill.WEB],
+    skills: [Skill.WEB, Language.TS, Framework.REACT, Framework.NEXT],
     role: "Web Development Intern",
   },
   {
@@ -28,7 +28,7 @@ export const workExperience: HistoryItem[] = [
       "Implemented an automated alert system using Telegram Bot API and Grafana to monitor the resource utilisation of 15 Linux virtual machines.",
     ],
     image: "/images/time_dotcom_berhad_logo.jpg",
-    skills: [Language.PHP, Language.BASH, Skill.SCRIPTING],
+    skills: [Skill.SCRIPTING, Language.PHP, Language.BASH],
     role: "Operations Support Systems Intern",
   },
 ];
