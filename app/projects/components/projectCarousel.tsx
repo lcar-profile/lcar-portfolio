@@ -50,7 +50,11 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
           {projects.map((project, id) => {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
-                <Card className="flex flex-col p-0 h-full overflow-hidden">
+                <Card
+                  className={`flex flex-col p-0 h-full overflow-hidden ${
+                    id === current - 1 && `border-[1.5px] border-primary`
+                  }`}
+                >
                   <Image
                     src={project.image ?? "/images/background.png"}
                     width={1920}
