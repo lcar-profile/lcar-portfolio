@@ -1,6 +1,10 @@
 "use client";
 
-import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   ChevronUp,
   ChevronDown,
@@ -27,95 +31,97 @@ export default function HistoryCard({
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Card className="p-0 hover:cursor-pointer hover:border-border-accent hover:bg-foreground/6">
-      <Collapsible
-        open={isOpen}
-        onOpenChange={setIsOpen}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-4"
-      >
-        <div className="flex flex-row w-full justify-between items-center">
-          <div className="flex flex-col">
-            <div className="flex flex-row gap-2 items-center text-sm md:text-base">
-              {image && (
-                <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
-                  <Image
-                    src={image}
-                    width={60}
-                    height={60}
-                    alt={"logo"}
-                    className="rounded-sm object-contain"
-                    unoptimized
-                  ></Image>
+    <Collapsible
+      open={isOpen}
+      onOpenChange={setIsOpen}
+      onClick={() => setIsOpen(!isOpen)}
+      className="w-full"
+    >
+      <CollapsibleTrigger asChild>
+        <Card>
+          <div className="flex flex-row w-full justify-between items-center">
+            <div className="flex flex-col">
+              <div className="flex flex-row gap-2 items-center text-sm md:text-base">
+                {image && (
+                  <div className="mr-2 w-[60px] h-[60px] relative hidden md:block">
+                    <Image
+                      src={image}
+                      width={60}
+                      height={60}
+                      alt={"logo"}
+                      className="rounded-sm object-contain"
+                      unoptimized
+                    ></Image>
+                  </div>
+                )}
+                <div className="flex flex-col">
+                  <div className="font-semibold text-lg mb-1">{company}</div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex flex-row gap-2 items-center text-muted-foreground">
+                      <div className="shrink-0">
+                        {type == HistoryType.WORK ? (
+                          <User size={18} />
+                        ) : (
+                          <GraduationCap size={18} />
+                        )}
+                      </div>
+                      <div>{role}</div>
+                    </div>
+                    <div className="flex flex-row gap-2 items-center text-muted-foreground">
+                      <Calendar size={18} className="shrink-0"></Calendar>
+                      <div className="flex flex-row">
+                        <span>
+                          {startDate.toLocaleDateString("en-US", {
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </span>
+                        <span className="px-2">-</span>
+                        <span>
+                          {endDate.toLocaleDateString("en-US", {
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {skills && (
+                <div className="flex flex-row gap-2 mt-2 flex-wrap">
+                  {skills.map((s) => {
+                    return <Badge key={s} label={s}></Badge>;
+                  })}
                 </div>
               )}
-              <div className="flex flex-col">
-                <div className="font-semibold text-lg mb-1">{company}</div>
-                <div className="flex flex-col gap-1">
-                  <div className="flex flex-row gap-2 items-center text-muted-foreground">
-                    <div className="shrink-0">
-                      {type == HistoryType.WORK ? (
-                        <User size={18} />
-                      ) : (
-                        <GraduationCap size={18} />
-                      )}
-                    </div>
-                    <div>{role}</div>
-                  </div>
-                  <div className="flex flex-row gap-2 items-center text-muted-foreground">
-                    <Calendar size={18} className="shrink-0"></Calendar>
-                    <div className="flex flex-row">
-                      <span>
-                        {startDate.toLocaleDateString("en-US", {
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                      <span className="px-2">-</span>
-                      <span>
-                        {endDate.toLocaleDateString("en-US", {
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            {skills && (
-              <div className="flex flex-row gap-2 mt-2 flex-wrap">
-                {skills.map((s) => {
-                  return <Badge key={s} label={s}></Badge>;
-                })}
-              </div>
-            )}
+            <div className="flex-0">
+              {isOpen ? (
+                <ChevronUp size={20}></ChevronUp>
+              ) : (
+                <ChevronDown size={20}></ChevronDown>
+              )}
+            </div>
           </div>
-          <div className="flex-0">
-            {isOpen ? (
-              <ChevronUp size={20}></ChevronUp>
-            ) : (
-              <ChevronDown size={20}></ChevronDown>
-            )}
-          </div>
-        </div>
-        <CollapsibleContent
-          className={
-            "data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]"
-          }
-        >
-          <hr className={`border-t-1 my-4 w-full`} />
-          <ul className="list-disc list-outside ml-4">
-            {description.map((d) => {
-              return (
-                <li key={d} className="mt-4">
-                  {d}
-                </li>
-              );
-            })}
-          </ul>
-        </CollapsibleContent>
-      </Collapsible>
-    </Card>
+          <CollapsibleContent
+            className={
+              "data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]"
+            }
+          >
+            <hr className={`border-t-1 my-4 w-full`} />
+            <ul className="list-disc list-outside ml-4">
+              {description.map((d) => {
+                return (
+                  <li key={d} className="mt-4">
+                    {d}
+                  </li>
+                );
+              })}
+            </ul>
+          </CollapsibleContent>
+        </Card>
+      </CollapsibleTrigger>
+    </Collapsible>
   );
 }

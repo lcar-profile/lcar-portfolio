@@ -37,6 +37,7 @@ export enum HistoryType {
 }
 
 export interface CardProps extends ComponentPropsWithoutRef<"div"> {
+  asChild?: boolean;
   children: ReactNode;
 }
 
