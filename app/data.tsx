@@ -24,7 +24,7 @@ export const workExperience: HistoryItem[] = [
     description: [
       "Developed object-oriented PHP scripts to log the daily network performance of 487 Linux single-board computers, and to issue alerts on performance degradation; improved reliability of the initial design by reducing false alerts; led a presentation to explain the design and operation of the alert system to other internal teams.",
       "Developed a PHP script that processes up to 400GB of data and generates an HTML email summarising the daily network performance of customer routers; enabling the team to quickly identify service areas experiencing network issues.",
-      "Developed Bash scripts to automate the installation of network drivers on single-board computers, increasing download speeds from 1.4Gbps to 2.0Gbps to support speed tests for network performance monitoring.",
+      "Developed Bash scripts to automate the installation of network drivers on single-board computers, increasing download speeds from 1.4Gbps to 2.0Gbps to support automated network performance monitoring",
       "Implemented an automated alert system using Telegram Bot API and Grafana to monitor the resource utilisation of 15 Linux virtual machines.",
     ],
     image: "/images/time_dotcom_berhad_logo.jpg",

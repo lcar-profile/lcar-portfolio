@@ -17,6 +17,8 @@ export const allProjects: ProjectProps[] = [
           <a
             href="https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
             className="text-hyperlink"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             World Othello Federation
           </a>
