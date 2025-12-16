@@ -27,6 +27,7 @@ export enum Framework {
 
 export enum Skill {
   SCRIPTING = "Scripting",
+  WEB = "Web",
   FRONTEND = "Front-end",
 }
 

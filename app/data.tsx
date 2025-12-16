@@ -13,7 +13,7 @@ export const workExperience: HistoryItem[] = [
       "Participated in code reviews to justify design choices, identify potential issues in code, and suggest improvements to maintain code quality.",
     ],
     image: "/images/netizen_experience_logo.png",
-    skills: [Language.TS, Framework.REACT, Framework.NEXT, Skill.FRONTEND],
+    skills: [Language.TS, Framework.REACT, Framework.NEXT, Skill.WEB],
     role: "Web Development Intern",
   },
   {

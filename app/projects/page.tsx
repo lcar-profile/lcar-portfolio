@@ -54,7 +54,7 @@ export default function Projects() {
           loop: true,
         }}
       >
-        <CarouselContent className="p-1">
+        <CarouselContent>
           {projects.map((project, id) => {
             return (
               <CarouselItem key={id} className="md:basis-1/3">
