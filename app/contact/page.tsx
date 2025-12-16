@@ -21,7 +21,6 @@ export default function Contact() {
           })}
         </div>
       </div>
-      <Separator></Separator>
     </div>
   );
 }

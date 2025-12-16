@@ -1,5 +1,4 @@
 import { allProjects } from "./data";
-import Separator from "../components/separator";
 import ProjectCarousel from "./components/projectCarousel";
 import { Metadata } from "next";
 
@@ -20,7 +19,6 @@ export default function Projects() {
         </h3>
       </div>
       <ProjectCarousel projects={projects} />
-      <Separator></Separator>
     </div>
   );
 }

@@ -43,16 +43,16 @@ export default function Home() {
         </div>
       </div>
       <Separator />
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col gap-6 items-center w-full mb-8">
         <div className="text-muted-foreground">Explore more</div>
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col w-full items-end">
           {navBarItems.map((n) => {
             if (n.pathname !== Pathname.HOME) {
               return (
                 <HoverLink
                   key={n.pathname}
                   href={n.pathname}
-                  className="flex flex-col"
+                  className="flex flex-col py-1"
                 >
                   <div className="flex items-center gap-1">
                     {n.label}
@@ -64,7 +64,6 @@ export default function Home() {
           })}
         </div>
       </div>
-      <Separator />
     </div>
   );
 }
