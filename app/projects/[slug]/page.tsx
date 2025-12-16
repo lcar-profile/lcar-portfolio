@@ -40,7 +40,7 @@ export default async function ProjectPage({
       <div className="flex flex-col mx-auto px-4 items-center">
         <div className="flex flex-col gap-2 w-full">
           <h1 className="text-3xl font-bold text-accent">{title}</h1>
-          <p className="mb-2 text-sm text-muted-foreground">{subtitle}</p>
+          <p className="mb-2 text-muted-foreground">{subtitle}</p>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
             <div className="flex flex-row gap-2">
               {tags.map((t) => {
