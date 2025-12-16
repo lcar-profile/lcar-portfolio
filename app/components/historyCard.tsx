@@ -105,8 +105,9 @@ export default function HistoryCard({
             </div>
           </div>
           <CollapsibleContent
+            onClick={(e) => e.stopPropagation()}
             className={
-              "data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out]"
+              "data-[state=open]:animate-[slideDown_50ms_ease-out] data-[state=closed]:animate-[slideUp_50ms_ease-out] cursor-default"
             }
           >
             <hr className={`border-t-1 my-4 w-full`} />
