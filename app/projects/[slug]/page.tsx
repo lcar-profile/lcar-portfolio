@@ -82,7 +82,7 @@ export default async function ProjectPage({
               {live && (
                 <Button
                   className="flex flex-row gap-1.5"
-                  variant="secondary"
+                  variant="outline"
                   asChild
                 >
                   <Link href={live} target="_blank" rel="noopener noreferrer">
@@ -109,7 +109,7 @@ export default async function ProjectPage({
                   href={prev.path}
                   className="self-start text-sm flex flex-row items-center gap-1"
                 >
-                  <ArrowLeft size={12} strokeWidth={1.5}></ArrowLeft>
+                  <ArrowLeft size={16} strokeWidth={1.5}></ArrowLeft>
                   {prev.title}
                 </HoverLink>
               )}
@@ -121,7 +121,7 @@ export default async function ProjectPage({
                   className="self-end text-sm flex flex-row items-center gap-1"
                 >
                   {next.title}
-                  <ArrowRight size={12} strokeWidth={1.5}></ArrowRight>
+                  <ArrowRight size={16} strokeWidth={1.5}></ArrowRight>
                 </HoverLink>
               )}
             </div>
