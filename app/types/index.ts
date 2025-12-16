@@ -8,7 +8,7 @@ import {
 } from "react";
 
 export enum Pathname {
-  HOME = "/home",
+  HOME = "/",
   PROJECTS = "/projects",
   CONTACT = "/contact",
 }

@@ -24,7 +24,7 @@ function WindowButton({
   return (
     <Button
       className={cn(
-        "bg-transparent text-foreground rounded-none hover:bg-slate-400 hover:dark:bg-neutral-900",
+        "bg-transparent text-foreground rounded-none hover:bg-stone-500 hover:dark:bg-neutral-900",
         className
       )}
       {...props}
