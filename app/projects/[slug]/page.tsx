@@ -109,7 +109,7 @@ export default async function ProjectPage({
                   href={prev.path}
                   className="self-start text-sm flex flex-row items-center gap-1"
                 >
-                  <ArrowLeft size={12}></ArrowLeft>
+                  <ArrowLeft size={12} strokeWidth={1.5}></ArrowLeft>
                   {prev.title}
                 </HoverLink>
               )}
@@ -121,7 +121,7 @@ export default async function ProjectPage({
                   className="self-end text-sm flex flex-row items-center gap-1"
                 >
                   {next.title}
-                  <ArrowRight size={12}></ArrowRight>
+                  <ArrowRight size={12} strokeWidth={1.5}></ArrowRight>
                 </HoverLink>
               )}
             </div>

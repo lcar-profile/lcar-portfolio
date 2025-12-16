@@ -1,4 +1,19 @@
-import { HistoryItem, HistoryType, Language, Framework, Skill } from "./types";
+import { Folder, House, Mail } from "lucide-react";
+import {
+  HistoryItem,
+  HistoryType,
+  Language,
+  Framework,
+  Skill,
+  NavBarItem,
+  Pathname,
+} from "./types";
+
+export const navBarItems: NavBarItem[] = [
+  { label: "Home", pathname: Pathname.HOME, icon: House },
+  { label: "Projects", pathname: Pathname.PROJECTS, icon: Folder },
+  { label: "Contact", pathname: Pathname.CONTACT, icon: Mail },
+];
 
 export const workExperience: HistoryItem[] = [
   {
@@ -52,7 +67,7 @@ export const education: HistoryItem[] = [
     startDate: new Date(2019, 0),
     endDate: new Date(2020, 5),
     company: "Taylor's College",
-    role: "Cambridge A Levels",
+    role: "Cambridge International AS & A Levels",
     description: [
       "Grades: 4A*",
       "Taylor's Distinction Award (2019): Full tuition fee waiver",

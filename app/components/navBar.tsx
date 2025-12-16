@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "./modeToggle";
-import { Menu, House, Folder, Mail } from "lucide-react";
+import { Menu } from "lucide-react";
 import IconButton from "./iconButton";
 import {
   DropdownMenu,
@@ -12,13 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import HoverLink from "./hoverLink";
-import { NavBarItem } from "../types";
-
-const navBarItems: NavBarItem[] = [
-  { label: "Home", pathname: "/", icon: House },
-  { label: "Projects", pathname: "/projects", icon: Folder },
-  { label: "Contact", pathname: "/contact", icon: Mail },
-];
+import { navBarItems } from "../data";
 
 export default function NavBar() {
   const path = usePathname();
@@ -77,7 +71,7 @@ export default function NavBar() {
               <li key={m.pathname} className="flex items-center h-full px-3">
                 <HoverLink
                   href={m.pathname}
-                  className={`${
+                  className={`no-underline ${
                     isCurrentPath &&
                     "font-bold border-b-[2px] border-foreground hover:border-hyperlink"
                   } flex h-full items-center gap-2 p-1`}

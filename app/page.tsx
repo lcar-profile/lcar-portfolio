@@ -1,8 +1,11 @@
 import HistoryCard from "./components/historyCard";
 import Separator from "./components/separator";
 import Editor from "./components/editor";
-import { editorText, education, workExperience } from "./data";
+import { editorText, education, navBarItems, workExperience } from "./data";
 import { Metadata } from "next";
+import HoverLink from "./components/hoverLink";
+import { ArrowRight } from "lucide-react";
+import { Pathname } from "./types";
 
 export const metadata: Metadata = {
   title: "Lai Carson",
@@ -39,7 +42,29 @@ export default function Home() {
           })}
         </div>
       </div>
-      <Separator></Separator>
+      <Separator />
+      <div className="flex flex-col gap-4 items-center">
+        <div className="text-muted-foreground">Explore more</div>
+        <div className="flex flex-col gap-2 w-full">
+          {navBarItems.map((n) => {
+            if (n.pathname !== Pathname.HOME) {
+              return (
+                <HoverLink
+                  key={n.pathname}
+                  href={n.pathname}
+                  className="flex flex-col"
+                >
+                  <div className="flex items-center gap-1">
+                    {n.label}
+                    <ArrowRight size={16} strokeWidth={1.5} />
+                  </div>
+                </HoverLink>
+              );
+            }
+          })}
+        </div>
+      </div>
+      <Separator />
     </div>
   );
 }

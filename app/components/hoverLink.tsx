@@ -6,20 +6,22 @@ import { HoverLinkProps } from "../types";
 import { Slot } from "@radix-ui/react-slot";
 
 export default function HoverLink({
-  asChild,
+  asChild = false,
   className,
   children,
+  href = "#",
   ...props
 }: HoverLinkProps) {
   const Comp = asChild ? Slot : Link;
 
   return (
     <Comp
-      {...props}
+      href={href}
       className={cn(
         "hover:text-hyperlink underline decoration-1 decoration-dotted underline-offset-4",
         className
       )}
+      {...props}
     >
       {children}
     </Comp>

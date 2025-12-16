@@ -7,6 +7,12 @@ import {
   ComponentProps,
 } from "react";
 
+export enum Pathname {
+  HOME = "/home",
+  PROJECTS = "/projects",
+  CONTACT = "/contact",
+}
+
 export enum Language {
   PYTHON = "Python",
   JS = "JavaScript",
@@ -66,10 +72,11 @@ export interface HistoryItem {
 }
 
 export interface HoverLinkProps
-  extends LinkProps,
+  extends Omit<LinkProps, "href">,
+    Partial<Pick<LinkProps, "href">>,
     Omit<ComponentProps<"a">, "href"> {
   asChild?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export interface NavBarItem {
