@@ -1,3 +1,4 @@
+import HoverLink from "../components/hoverLink";
 import { ProjectProps, Framework, Language, ProjectParams } from "../types";
 
 export const allProjects: ProjectProps[] = [
@@ -14,14 +15,18 @@ export const allProjects: ProjectProps[] = [
         <p>
           This game features a single-player mode, where users play against a
           computer opponent. It implements all game rules defined by the{" "}
-          <a
+          <HoverLink
+            asChild={true}
             href="https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
-            className="text-hyperlink"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            World Othello Federation
-          </a>
+            <a
+              className="text-hyperlink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              World Othello Federation
+            </a>
+          </HoverLink>
           . It previously supported loading saved games, but this feature is
           temporarily disabled.
         </p>

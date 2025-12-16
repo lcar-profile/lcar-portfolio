@@ -1,7 +1,11 @@
 import { LucideIcon } from "lucide-react";
 import { LinkProps } from "next/link";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
-import { IconType } from "react-icons";
+import {
+  ComponentPropsWithoutRef,
+  ReactNode,
+  MouseEvent,
+  ComponentProps,
+} from "react";
 
 export enum Language {
   PYTHON = "Python",
@@ -61,9 +65,11 @@ export interface HistoryItem {
   description: string[];
 }
 
-export interface HoverLinkProps extends LinkProps {
-  className?: string;
-  children: React.ReactNode;
+export interface HoverLinkProps
+  extends LinkProps,
+    Omit<ComponentProps<"a">, "href"> {
+  asChild?: boolean;
+  children: ReactNode;
 }
 
 export interface NavBarItem {
@@ -98,12 +104,12 @@ export enum ProjectParams {
   POKEMON = "pokemon-roguelike",
 }
 
-export type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
+export interface IconButtonProps extends ComponentProps<"button"> {
   children: ReactNode;
   size?: number;
-  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   screenReader: string;
-};
+}
 
 export interface ProjectCarouselProps {
   projects: ProjectProps[];
