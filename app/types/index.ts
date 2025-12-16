@@ -89,6 +89,7 @@ export interface ProjectProps {
   live?: string;
   body: ReactNode;
 }
+
 export enum ProjectParams {
   REVERSI = "reversi",
   NEWSPORTAL = "newsportal",
@@ -96,9 +97,14 @@ export enum ProjectParams {
   NUTRITION = "nutrition-assitant",
   POKEMON = "pokemon-roguelike",
 }
+
 export type IconButtonProps = ComponentPropsWithoutRef<"button"> & {
   children: ReactNode;
   size?: number;
   handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   screenReader: string;
 };
+
+export interface ProjectCarouselProps {
+  projects: ProjectProps[];
+}
