@@ -2,6 +2,12 @@ import HistoryCard from "./components/historyCard";
 import Separator from "./components/separator";
 import Editor from "./components/editor";
 import { editorText, education, workExperience } from "./data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lai Carson",
+  description: "Home",
+};
 
 export default function Home() {
   return (

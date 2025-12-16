@@ -1,6 +1,12 @@
 import { allProjects } from "./data";
 import Separator from "../components/separator";
 import ProjectCarousel from "./components/projectCarousel";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lai Carson | Projects",
+  description: "A collection of my personal and university projects",
+};
 
 export default function Projects() {
   const projects = allProjects;

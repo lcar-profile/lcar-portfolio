@@ -8,6 +8,24 @@ import { ArrowLeft, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import Separator from "@/app/components/separator";
 import HoverLink from "@/app/components/hoverLink";
 import { ProjectParams } from "@/app/types";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const { title, subtitle } = allProjects.find((p) => p.path === slug) ?? {
+    title: "Project",
+    subtitle: "Description not found.",
+  };
+
+  return {
+    title: `Lai Carson | ${title}`,
+    description: subtitle,
+  };
+}
 
 export function generateStaticParams() {
   return (Object.keys(ProjectParams) as Array<keyof typeof ProjectParams>).map(

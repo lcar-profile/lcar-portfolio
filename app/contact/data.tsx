@@ -4,18 +4,18 @@ import { ContactItem } from "../types";
 
 export const contactItems: ContactItem[] = [
   {
-    icon: IoMail,
+    icon: <IoMail />,
     title: "Email",
     subtitle: "laicarson.swe@gmail.com",
   },
   {
-    icon: FaLinkedin,
+    icon: <FaLinkedin />,
     title: "LinkedIn",
     link: "http://linkedin.com/in/l-car",
     subtitle: "linkedin.com/in/l-car",
   },
   {
-    icon: FaGithub,
+    icon: <FaGithub />,
     title: "GitHub",
     link: "http://github.com/carsnl",
     subtitle: "github.com/carsnl",
