@@ -83,4 +83,4 @@ export const education: HistoryItem[] = [
 ];
 
 export const editorText =
-  "Fresh graduate with past development experience in industry projects involving web, mobile and scripting.\n\nSeeking an entry-level role in anything software related to continue learning.\n\n:)";
+  "Fresh graduate with development experience in industry projects involving web, mobile and scripting.\n\nSeeking an entry-level role in software development, with opportunities to continue learning.\n\n:)";
