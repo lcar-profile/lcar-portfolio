@@ -67,7 +67,7 @@ export const allProjects: ProjectProps[] = [
           from a variety of reputable sources and displays them all in a single
           infinite scrolling page. Users can click on any article to read more,
           which redirects them to the original publisher&apos;s domain. Searches
-          can be customised by with specific keywords and filters.
+          can be customised with keywords and filters.
         </p>
         <p>
           Most of my university courses used Python. This was a personal
