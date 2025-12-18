@@ -11,8 +11,8 @@ export const contactItems: ContactItem[] = [
   {
     Icon: <FaLinkedin size={24} />,
     title: "LinkedIn",
-    link: "http://linkedin.com/in/l-car",
-    subtitle: "linkedin.com/in/l-car",
+    link: "http://linkedin.com/in/laicarson-swe",
+    subtitle: "linkedin.com/in/laicarson-swe",
   },
   {
     Icon: <FaGithub size={24} />,
