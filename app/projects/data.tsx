@@ -70,16 +70,15 @@ export const allProjects: ProjectProps[] = [
           can be customised with keywords and filters.
         </p>
         <p>
-          Most of my university courses used Python. This was a personal
-          project, which served as an introduction to the fundamentals of web
-          development, allowing me to use JavaScript, HTML and CSS to build
-          proper user interfaces, rather than relying on Python and Java
-          libraries.
+          Most of my university courses used Python. This was a personal project
+          undertaken to learn about the fundamentals of web development, which
+          allowed me to use JavaScript, HTML and CSS to build proper user
+          interfaces, rather than relying on Python and Java libraries.
         </p>
         <p>
           A simple Node.js back-end was later added to prevent exposing an API
           key in the code repository and client-side script. All requests to the
-          external endpoint were subsequently handled by the backend for added
+          external endpoint were subsequently handled by the back-end for added
           security.
         </p>
       </>
