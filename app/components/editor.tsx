@@ -13,14 +13,14 @@ import {
   RotateCcw,
   Trash2,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, ComponentProps } from "react";
 import { EditorProps, EditorButtonProps } from "../types";
 
 function WindowButton({
   Icon,
   className,
   ...props
-}: EditorButtonProps & React.ComponentProps<"button">) {
+}: EditorButtonProps & ComponentProps<"button">) {
   return (
     <Button
       className={cn(
@@ -139,7 +139,11 @@ export default function Editor({ text }: EditorProps) {
     return (
       <div
         className="flex flex-col w-fit items-center gap-1 p-3 hover:bg-foreground/10 hover:cursor-pointer rounded-sm"
-        onClick={() => setIsClosed(false)}
+        onClick={() => {
+          setIsFullscreen(false);
+          setIsOpen(true);
+          setIsClosed(false);
+        }}
       >
         <FileText size={36} />
         <div className="text-xs text-muted-foreground">welcome.txt</div>
