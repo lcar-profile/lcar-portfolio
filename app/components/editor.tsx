@@ -38,7 +38,7 @@ function EditorButton({
   Icon,
   className,
   ...props
-}: EditorButtonProps & React.ComponentProps<"button">) {
+}: EditorButtonProps & ComponentProps<"button">) {
   return (
     <Button
       className={cn(
