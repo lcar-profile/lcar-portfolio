@@ -63,7 +63,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="flex flex-row h-full items-center">
-        <ul className="flex flex-row h-full items-center mr-6 items-center hidden md:flex">
+        <ul className="flex flex-row h-full items-center mr-2 items-center hidden md:flex">
           {navBarItems.map((m) => {
             const isCurrentPath =
               m.pathname === "/" ? path === "/" : path.startsWith(m.pathname);
