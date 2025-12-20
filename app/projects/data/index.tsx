@@ -1,5 +1,5 @@
-import HoverLink from "../components/hoverLink";
-import { ProjectProps, Framework, Language, ProjectParams } from "../types";
+import HoverLink from "../../components/hoverLink";
+import { ProjectProps, Framework, Language, ProjectParams } from "../../types";
 
 export const allProjects: ProjectProps[] = [
   {

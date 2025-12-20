@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import { ContactItem } from "../types";
+import { ContactItem } from "../../types";
 
 export const contactItems: ContactItem[] = [
   {

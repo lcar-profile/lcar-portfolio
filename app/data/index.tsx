@@ -7,7 +7,7 @@ import {
   Skill,
   NavBarItem,
   Pathname,
-} from "./types";
+} from "../types";
 
 export const navBarItems: NavBarItem[] = [
   { label: "Home", pathname: Pathname.HOME, icon: House },
@@ -22,8 +22,8 @@ export const workExperience: HistoryItem[] = [
     endDate: new Date(2025, 1),
     company: "Netizen eXperience",
     description: [
-      "Enhanced a hiring dashboard web application in Next.js that processes job applications by implementing new front-end features involving CRUD operations, such as application history to improve application tracking.",
-      "Implemented UI according to Figma prototypes provided by the UI/UX team, ensuring accurate translation of designs and responsiveness across different screen sizes.",
+      "Enhanced a web application in Next.js that processes job applications by implementing new front-end features involving CRUD operations, such as application history to improve application tracking.",
+      "Implemented UI according to Figma prototypes provided by the UI/UX team, ensuring accurate translation of designs and responsiveness across different screen sizes using Tailwind CSS.",
       "Adhered to Agile development practices by participating in daily stand-ups, sprint planning and reviews with the Project Manager and Product Owner.",
       "Participated in code reviews with other developers to justify design choices, identify errors, and suggest improvements to maintain coding standards.",
     ],
@@ -37,7 +37,7 @@ export const workExperience: HistoryItem[] = [
     endDate: new Date(2023, 11),
     company: "TIME",
     description: [
-      "Developed object-oriented PHP scripts to log daily network performance of 487 Linux single-board computers and issue alerts on performance degradation; improved reliability of the initial design by reducing false alerts; led a presentation explaining the alert system to internal stakeholders.",
+      "Developed object-oriented PHP scripts to log the daily network performance of over 480 Linux single-board computers and issue alerts on performance degradation via a REST API; improved reliability of the initial design by reducing false alerts; led a presentation explaining the alert system to internal stakeholders.",
       "Developed a PHP script that generates an HTML email summarising the daily network performance of customer routers, enabling the team to quickly identify service areas experiencing network issues.",
       "Developed a Bash script to automate the installation of network drivers on single-board computers, increasing download speeds from 1.4Gbps to 2.0Gbps to support high bandwidth network performance monitoring.",
     ],
